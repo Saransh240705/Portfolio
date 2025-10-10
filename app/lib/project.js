@@ -1,0 +1,29 @@
+export const project = [
+  {
+    id: 1,
+    serialNo: "01",
+    name: "Streamify",
+    image: "/assets/Streamify.png",
+    tag1: "React",
+    tag2: "Express",
+    tag3: "MongoDB",
+  },
+  {
+    id: 2,
+    serialNo: "02",
+    name: "PeaceHub",
+    image: "/assets/PeaceHub.jpeg",
+    tag1: "React",
+    tag2: "Figma",
+    tag3: "TailwindCSS",
+  },
+  {
+    id: 3,
+    serialNo: "03",
+    name: "Brainwave",
+    image: "/assets/Brainwave.jpeg",
+    tag1: "React",
+    tag2: "javaScript",
+    tag3: "TailwindCSS",
+  },
+];
