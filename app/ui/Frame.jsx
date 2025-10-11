@@ -10,7 +10,7 @@ export default function Frame() {
   return (
     <div className="relative">
       {/* //top-bottom */}
-      <div className="fixed flex justify-between flex-col z-40">
+      <div className="fixed flex justify-between flex-col ">
         <div className="w-[100vw] h-[3rem] border-[0.5px] border-gray-600">
           <div className="absolute left-[43.3rem] opacity-30 top-[0.7rem]">
             <p className="flex items-center justify-center text-center font-NeueMachina text-white">
@@ -18,9 +18,9 @@ export default function Frame() {
             </p>
           </div>
         </div>
-        <div className="absolute w-[100vw] h-[3rem] border-[0.5px] top-[54.67rem] flex items-center p-4 border-gray-600">
+        <div className="absolute z-10 w-[100vw] h-[3rem] border-[0.5px] top-[54.67rem] flex items-center p-4 border-gray-600">
           <div className="h-5 w-5 bg-[#4949CE] text rounded-full" />
-          <div className="h-5 w-5 right-[1rem] absolute bg-[#4949CE] text rounded-full" />
+          <div className="h-5 w-5 right-[1rem] absolute bg-[#4949CE] rounded-full" />
           <p className="absolute text-center font-NeueMachina left-[42rem] text-white">
             Based In India
           </p>
@@ -41,7 +41,7 @@ export default function Frame() {
       {/* left-right */}
       <div className="flex justify-between ">
         <div>
-          <nav className="bg-transparent border-[0.5px] fixed flex items-center justify-center border-gray-600 w-fit h-[100vh] text-gray-400 p-4 z-50">
+          <nav className="bg-transparent border-[0.5px] fixed flex items-center justify-center border-gray-600 w-fit h-[100vh] text-gray-400 p-4 ">
             <ul className="flex flex-col gap-4">
               <li>
                 <Link href="/" className="block text-[#4949CE] transition-colors duration-200">

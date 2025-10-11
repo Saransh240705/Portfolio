@@ -25,7 +25,7 @@ const AboutFrame = () => {
             </span>
           </div>
         </div>
-        <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] h-[25rem] max-w-[700px]">
+        <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] h-[25rem] max-w-[700px] cursor-move">
           <ol className="list-decimal p-4 font-NeueMachina pt-2 text-[15px] pl-6 w-fit max-w-[700px]">
             <li>
               Hi, I’m <span className="code-green">Saransh</span> — a freelance <span className="code-blue">Full-Stack Web Developer</span> passionate

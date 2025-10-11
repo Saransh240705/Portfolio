@@ -60,4 +60,19 @@
   font-family: var(--font-PP-Neue-Machina);
 }
 
+.scrollLeft {
+  animation: scrollLeft 50s linear infinite;
+}
 
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * 4 * 1370px + 48px));
+  }
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}

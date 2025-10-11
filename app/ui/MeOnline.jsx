@@ -1,6 +1,7 @@
 "use client";
 
 import { Minus, Square, X } from "lucide-react";
+import Link from "next/link";
 
 const MeOnline = () => {
   return (
@@ -20,17 +21,17 @@ const MeOnline = () => {
             </span>
           </div>
         </div>
-        <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] h-[4rem] max-w-[200px]">
+        <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] h-[4rem] max-w-[200px] cursor-movez">
           <ol className="list-decimal font-NeueMachina pt-2 text-[15px] pl-6 max-w-[700px]">
-            <a className="underline" href="https://github.com/Saransh240705">
+            <Link className="underline" href="https://github.com/Saransh240705">
               <li>Github</li>
-            </a>
-            <a
+            </Link>
+            <Link
               className="underline"
               href="https://linkedin.com/in/saransh-b3729022b"
             >
               <li>linkedIn</li>
-            </a>
+            </Link>
           </ol>
         </div>
       </div>

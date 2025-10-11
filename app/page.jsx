@@ -3,6 +3,8 @@ import Home from "./ui/Home";
 import Frame from "./ui/Frame";
 import Project from "./ui/Project";
 import Testimonial from "./ui/Testimonial";
+import Collaboration from "./ui/Collaboration";
+import Footer from "./ui/Footer";
 
 export default function Page() {
   return (
@@ -12,6 +14,8 @@ export default function Page() {
       <About />
       <Project />
       <Testimonial />
+      <Collaboration />
+      <Footer />
     </>
   );
 }

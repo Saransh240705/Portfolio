@@ -26,7 +26,7 @@ export default function Button({text, width, height}) {
       />
 
       {/* Text Container */}
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      <div className="relative w-full h-full flex font-NeueMachina items-center justify-center overflow-hidden">
         <motion.span
           key="text"
           animate={{
@@ -46,7 +46,7 @@ export default function Button({text, width, height}) {
             opacity: hovered ? 1 : 0,
           }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="absolute"
+          className="absolute font-NeueMachina"
         >
           {text}
         </motion.span>

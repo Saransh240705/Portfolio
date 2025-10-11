@@ -20,7 +20,7 @@ const WhereIWorkFrame = () => {
             </span>
           </div>
         </div>
-        <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] h-fit p-2 max-w-[400px]">
+        <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] h-fit p-2 max-w-[400px] cursor-move">
           <ol className="list-decimal font-NeueMachina pt-2 text-[15px] pl-6 max-w-[700px]">
             <li>Currently based in New Delhi, India 🇮🇳</li>
             <li>
