@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "vercel-build": "npm run clean && next build"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

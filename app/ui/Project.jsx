@@ -6,7 +6,7 @@ import ProjectBox from "./ProjectBox";
 
 const Project = () => {
   return (
-    <div className="text-white m-15 relative">
+    <div className="text-white mt-15 relative">
       <div className="bg-[#4949CE] h-[9rem] w-[9rem] -z-100 mt-220 ml-34 absolute rounded-full blur-[6rem]" />
       <div className="bg-[#4949CE] h-[9rem] w-[9rem] -z-100 mt-55 ml-270 absolute rounded-full blur-[6rem]" />
       <div className="mb-[14rem] flex w-full justify-center items-center">
@@ -14,7 +14,7 @@ const Project = () => {
           Project <span className="text-highlighted">Highlight</span>
         </h1>
       </div>
-      <div className="w-full flex flex-col gap-10 justify-center items-center">
+      <div className="w-full flex -mt-15 flex-col gap-10 justify-center items-center">
         <div>
           {project.map((p) => (
             <ProjectBox

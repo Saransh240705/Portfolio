@@ -18,7 +18,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="mt-50  mb-23 -z-50">
+    <div className="mt-40  mb-23 -z-50">
       <div className=" flex justify-center gap-12 items-center max-w-[34rem] text-center m-auto">
         <h1 className="text-5xl text-white font-ObjectSans ">
           Nice things <span className="text-highlighted"> people say </span>

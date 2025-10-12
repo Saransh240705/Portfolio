@@ -5,7 +5,7 @@ import { Minus, Square, X } from "lucide-react";
 
 // Register the Draggable plugin
 
-const AboutFrame = () => {
+ const AboutFrame = () => {
   
 
   return (
