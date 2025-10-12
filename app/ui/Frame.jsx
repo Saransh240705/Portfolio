@@ -63,7 +63,7 @@ export default function Frame() {
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="block hover:text-[#4949CE] transition-colors duration-200">
+                <Link href="/project" className="block hover:text-[#4949CE] transition-colors duration-200">
                   <Image
                     src="/assets/Laptop Coding.svg"
                     alt="projects"
