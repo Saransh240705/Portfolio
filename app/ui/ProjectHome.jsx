@@ -13,7 +13,7 @@ const ProjectHome = () => {
             <div className="text-center px-8 max-w-4xl mx-auto">
               <h1 className="text-white text-6xl w-[32rem]  m-auto leading-tight mb-8 font-ObjectSans">
                 A collection of my best{" "}
-                <span className="code-blue"> projects</span>
+                <span className="code-aqua"> projects</span>
               </h1>
               <p className="text-white text-xl max-w-2xl mx-auto code-content font-NeueMachina">
                 With many years in web development, I acquired extensive

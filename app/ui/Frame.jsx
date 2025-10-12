@@ -18,9 +18,9 @@ export default function Frame() {
             </p>
           </div>
         </div>
-        <div className="absolute z-10 w-[100vw] h-[3rem] border-[0.5px] top-[54.67rem] flex items-centerp-4 border-gray-600">
+        <div className="absolute z-10 w-[100vw] h-[3rem] border-[0.5px] top-[54.67rem] flex items-center p-4 border-gray-600">
           <div className="h-5 w-5 bg-[#4949CE] text rounded-full" />
-          <div className="h-5 w-5 right-[1rem] absolute bg-[#4949CE] tounded-full" />
+          <div className="h-5 w-5 right-[1rem] absolute bg-[#4949CE] rounded-full" />
           <p className="absolute text-center font-NeueMachina left-[42rem] text-white">
             Based In India
           </p>
@@ -32,7 +32,6 @@ export default function Frame() {
               <LinkedinIcon className="size-6 cursor-pointer" />
             </a>
           </div>
-          <div></div>
           <div className="text-white rounded-sm group cursor-pointer max-w-[14rem] max-h-[2rem] overflow-hidden flex absolute gap-2 items-center right-[5rem] border border-gray-600 font-NeueMachina hover:border-[#4949CE] transition-colors duration-200">
             <Button text="let's-work-together →" width={235} height={32} />
           </div>

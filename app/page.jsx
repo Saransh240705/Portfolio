@@ -13,7 +13,7 @@ export default function Page() {
       <Home />
       <About />
       <Project />
-      <Testimonial />
+      <Testimonial color={"text-highlighted"} />
       <Collaboration />
       <Footer />
     </>

@@ -74,22 +74,4 @@ export const projectsFull = [
     tag2: "Appwrite",
     tag3: "TailwindCSS",
   },
-  {
-    id: 3,
-    serialNo: "03",
-    name: "Brainwave",
-    image: "/assets/Brainwave.jpeg",
-    tag1: "React",
-    tag2: "javaScript",
-    tag3: "TailwindCSS",
-  },
-  {
-    id: 3,
-    serialNo: "03",
-    name: "Brainwave",
-    image: "/assets/Brainwave.jpeg",
-    tag1: "React",
-    tag2: "javaScript",
-    tag3: "TailwindCSS",
-  },
 ];
