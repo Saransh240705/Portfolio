@@ -76,3 +76,29 @@
 .slider-track:hover {
   animation-play-state: paused;
 }
+
+/* GSAP ScrollSmoother CSS */
+#smooth-wrapper {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+}
+
+/* Optional: Add some scroll effects */
+.scroll-slow {
+  will-change: transform;
+}
+
+.scroll-fast {
+  will-change: transform;
+}

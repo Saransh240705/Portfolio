@@ -27,7 +27,7 @@ const Testimonial = ({color}) => {
                   pauseOnHover: true, // Do not pause scrolling when hovering over the carousel
                   pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
                   rewind: true, // Rewind to start when the end is reached
-                  speed: 1, // Scrolling speed
+                  speed: 3, // Scrolling speed
                 },
                 arrows: false, // Hide navigation arrows
                 pagination: false, // Hide pagination dots
@@ -51,7 +51,7 @@ const Testimonial = ({color}) => {
                     pauseOnHover: true, // Do not pause scrolling when hovering over the carousel
                     pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
                     rewind: true, // Rewind to start when the end is reached
-                    speed: -1, // Scrolling speed
+                    speed: -3, // Scrolling speed
                   },
                   arrows: false, // Hide navigation arrows
                   pagination: false, // Hide pagination dots

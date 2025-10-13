@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function Button({text, width, height}) {
+export default function Button({text, width, height, themeColor = "#4949CE"}) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ export default function Button({text, width, height}) {
         className="absolute inset-0"
         animate={{
           background: hovered
-            ? "#4949CE"
+            ? themeColor
             : "",
         }}
         transition={{ duration: 0.6, ease: "easeInOut" }}

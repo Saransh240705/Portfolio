@@ -24,13 +24,13 @@ const Footer = () => {
 
       <div className="flex gap-14 pr-4 font-NeueMachina code-content">
         <div>
-          <Link href="">about</Link>
+          <Link href="/about">about</Link>
         </div>
         <div>
-          <Link href="">work</Link>
+          <Link href="/project">project</Link>
         </div>
         <div>
-          <Link href="">contact</Link>
+          <Link href="/contact-me">contact</Link>
         </div>
       </div>
     </div>
