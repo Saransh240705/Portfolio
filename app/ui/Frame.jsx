@@ -13,25 +13,58 @@ export default function Frame() {
   // Define color themes for each page
   const getThemeColors = () => {
     switch (pathname) {
-      case '/about':
+      case "/about":
         return {
-          accent: '#E24E62', 
-          iconFilter: 'brightness(0) saturate(100%) invert(55%) sepia(57%) saturate(5084%) hue-rotate(336deg) brightness(95%) contrast(85%)'
+          accent: "#E24E62",
+          iconFilter:
+            "brightness(0) saturate(100%) invert(55%) sepia(57%) saturate(5084%) hue-rotate(336deg) brightness(95%) contrast(85%)",
         };
-      case '/project':
+      case "/project":
         return {
-          accent: '#91D2F9',  
-          iconFilter: 'brightness(0) saturate(100%) invert(85%) sepia(27%) saturate(1453%) hue-rotate(173deg) brightness(99%) contrast(96%)'
+          accent: "#91D2F9",
+          iconFilter:
+            "brightness(0) saturate(100%) invert(85%) sepia(27%) saturate(1453%) hue-rotate(173deg) brightness(99%) contrast(96%)",
         };
-      case '/contact-me':
+      case "/project/Streamify":
         return {
-          accent: '#4D81ED', 
-          iconFilter: 'brightness(0) saturate(100%) invert(65%) sepia(81%) saturate(2697%) hue-rotate(212deg) brightness(97%) contrast(90%)'
+          accent: "#91D2F9",
+          iconFilter:
+            "brightness(0) saturate(100%) invert(85%) sepia(27%) saturate(1453%) hue-rotate(173deg) brightness(99%) contrast(96%)",
+        };
+      case "/project/PeaceHub":
+        return {
+          accent: "#91D2F9",
+          iconFilter:
+            "brightness(0) saturate(100%) invert(85%) sepia(27%) saturate(1453%) hue-rotate(173deg) brightness(99%) contrast(96%)",
+        };
+      case "/project/Brainwave":
+        return {
+          accent: "#91D2F9",
+          iconFilter:
+            "brightness(0) saturate(100%) invert(85%) sepia(27%) saturate(1453%) hue-rotate(173deg) brightness(99%) contrast(96%)",
+        };
+      case "/project/SafenGo":
+        return {
+          accent: "#91D2F9",
+          iconFilter:
+            "brightness(0) saturate(100%) invert(85%) sepia(27%) saturate(1453%) hue-rotate(173deg) brightness(99%) contrast(96%)",
+        };
+      case "/project/MovieBase":
+        return {
+          accent: "#91D2F9",
+          iconFilter:
+            "brightness(0) saturate(100%) invert(85%) sepia(27%) saturate(1453%) hue-rotate(173deg) brightness(99%) contrast(96%)",
+        };
+      case "/contact-me":
+        return {
+          accent: "#4D81ED",
+          iconFilter:
+            "brightness(0) saturate(100%) invert(65%) sepia(81%) saturate(2697%) hue-rotate(212deg) brightness(97%) contrast(90%)",
         };
       default:
         return {
-          accent: '#4949CE', 
-          iconFilter: 'none'
+          accent: "#4949CE",
+          iconFilter: "none",
         };
     }
   };
@@ -39,52 +72,70 @@ export default function Frame() {
   const themeColors = getThemeColors();
 
   return (
-    <div className="relative z-50 ">
+    <div className="relative z-50  ">
       {/* //top-bottom */}
       <div className="fixed flex backdrop-blur-xs justify-between flex-col z-50">
         <div className="w-[100vw] h-[3rem] border-[0.5px] border-gray-600">
           <div className=" h-full  flex items-center justify-center text-center font-NeueMachina text-white">
-            <p className="">
-              <span style={{ color: themeColors.accent }}>&lt;S&gt;</span>aransh
-            </p>
+            <Link href="/">
+              <p className="cursor-pointer">
+                <span style={{ color: themeColors.accent }}>&lt;S&gt;</span>
+                aransh
+              </p>
+            </Link>
           </div>
         </div>
         <div className="absolute backdrop-blur-lg z-50 w-[100vw] h-[3rem] border-[0.5px] top-[54.67rem] flex items-center p-4 border-gray-600">
-          <div 
-            className="h-5 w-5 text rounded-full transition-colors duration-300" 
+          <div
+            className="h-5 w-5 text rounded-full transition-colors duration-300"
             style={{ backgroundColor: themeColors.accent }}
           />
-          <div 
-            className="h-5 w-5 right-[1rem] absolute rounded-full transition-colors duration-300" 
+          <div
+            className="h-5 w-5 right-[1rem] absolute rounded-full transition-colors duration-300"
             style={{ backgroundColor: themeColors.accent }}
           />
           <p className="absolute text-center font-NeueMachina left-[42rem] text-white">
             Based In India
           </p>
           <div className="flex absolute gap-3 left-[65rem]">
-            <a 
-              href="https://github.com/Saransh240705" 
+            <a
+              href="https://github.com/Saransh240705"
               className="text-white transition-colors duration-200"
-              onMouseEnter={(e) => e.currentTarget.style.color = themeColors.accent}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.color = themeColors.accent)
+              }
+              onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
             >
               <GithubIcon className="size-6 cursor-pointer" />
             </a>
-            <a 
-              href="https://linkedin.com/in/saransh-b3729022b" 
+            <a
+              href="https://linkedin.com/in/saransh-b3729022b"
               className="text-white transition-colors duration-200"
-              onMouseEnter={(e) => e.currentTarget.style.color = themeColors.accent}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.color = themeColors.accent)
+              }
+              onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
             >
               <LinkedinIcon className="size-6 cursor-pointer" />
             </a>
           </div>
-          <div 
+          <div
             className="text-white rounded-sm group cursor-pointer max-w-[14rem] max-h-[2rem] overflow-hidden flex absolute gap-2 items-center right-[5rem] border border-gray-600 font-NeueMachina transition-colors duration-200"
-            onMouseEnter={(e) => e.currentTarget.style.borderColor = themeColors.accent}
-            onMouseLeave={(e) => e.currentTarget.style.borderColor = '#4b5563'}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.borderColor = themeColors.accent)
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.borderColor = "#4b5563")
+            }
           >
-            <Button text="let's-work-together →" width={235} height={32} themeColor={themeColors.accent} />
+            <Link href="/contact-me">
+              <Button
+                text="let's-work-together →"
+                width={235}
+                height={32}
+                themeColor={themeColors.accent}
+              />
+            </Link>
           </div>
         </div>
       </div>
@@ -94,11 +145,13 @@ export default function Frame() {
           <nav className=" border-[0.5px] fixed flex items-center justify-center border-gray-600 w-fit h-[100vh] text-gray-400 p-4 z-50">
             <ul className="flex flex-col gap-4">
               <li>
-                <Link 
-                  href="/" 
+                <Link
+                  href="/"
                   className={clsx(
                     "block transition-colors duration-200 rounded",
-                    pathname === '/' ? 'text-highlighted' : 'text-gray-400 hover:text-white'
+                    pathname === "/"
+                      ? "text-highlighted"
+                      : "text-gray-400 hover:text-white"
                   )}
                 >
                   <House
@@ -109,11 +162,13 @@ export default function Frame() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/about" 
+                <Link
+                  href="/about"
                   className={clsx(
                     "block transition-colors duration-200 rounded",
-                    pathname === '/about' ? 'text-white' : 'text-gray-400 hover:text-white'
+                    pathname === "/about"
+                      ? "text-white"
+                      : "text-gray-400 hover:text-white"
                   )}
                 >
                   <Image
@@ -123,17 +178,20 @@ export default function Frame() {
                     height={18}
                     className="pointer-events-none"
                     style={{
-                      filter: pathname === '/about' ? themeColors.iconFilter : 'none'
+                      filter:
+                        pathname === "/about" ? themeColors.iconFilter : "none",
                     }}
                   />
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/project" 
+                <Link
+                  href="/project"
                   className={clsx(
                     "block transition-colors duration-200 rounded",
-                    pathname === '/project' ? 'text-white' : 'text-gray-400 hover:text-white'
+                    pathname === "/project"
+                      ? "text-white"
+                      : "text-gray-400 hover:text-white"
                   )}
                 >
                   <Image
@@ -143,17 +201,22 @@ export default function Frame() {
                     height={18}
                     className="pointer-events-none"
                     style={{
-                      filter: pathname === '/project' ? themeColors.iconFilter : 'none'
+                      filter:
+                        pathname === "/project"
+                          ? themeColors.iconFilter
+                          : "none",
                     }}
                   />
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/contact-me" 
+                <Link
+                  href="/contact-me"
                   className={clsx(
                     "block transition-colors duration-200 rounded",
-                    pathname === '/contact-me' ? 'text-white' : 'text-gray-400 hover:text-white'
+                    pathname === "/contact-me"
+                      ? "text-white"
+                      : "text-gray-400 hover:text-white"
                   )}
                 >
                   <Image
@@ -163,7 +226,10 @@ export default function Frame() {
                     height={18}
                     className="pointer-events-none"
                     style={{
-                      filter: pathname === '/contact-me' ? themeColors.iconFilter : 'none'
+                      filter:
+                        pathname === "/contact-me"
+                          ? themeColors.iconFilter
+                          : "none",
                     }}
                   />
                 </Link>

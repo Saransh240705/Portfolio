@@ -1,6 +1,7 @@
 import { Minus, Square, X } from "lucide-react";
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
 
 const Collaboration = () => {
   return (
@@ -43,7 +44,13 @@ const Collaboration = () => {
                 <h1 className="text-4xl font-ObjectSans">
                   Let’s work together on your next project
                 </h1>
-                <Button text="let's-work-together →" width={235} height={32} />
+                <Link href="/contact-me">
+                  <Button
+                    text="let's-work-together →"
+                    width={235}
+                    height={32}
+                  />
+                </Link>
               </div>
             </div>
           </div>

@@ -21,11 +21,11 @@ const TechStackFrame = () => {
               </span>
             </div>
           </div>
-          <div className="border-white text-white rounded-bl-xl pt-3 rounded-br-xl bg-black border-[0.5px] h-[15rem] max-w-[700px] ">
+          <div className="border-white text-white rounded-bl-xl pt-3 rounded-br-xl bg-black border-[0.5px] h-[18rem] max-w-[800px] ">
             <div className="grid grid-cols-6 grid-rows-5 gap-4">
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/HTML.svg"
+                  src="/assets/HTML 5.svg"
                   width={102}
                   height={102}
                   alt="HTML"
@@ -34,7 +34,7 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/CSS.svg"
+                  src="/assets/CSS3.svg"
                   width={102}
                   height={102}
                   alt="CSS"
@@ -43,7 +43,7 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/Js.svg"
+                  src="/assets/JavaScript.svg"
                   width={102}
                   height={102}
                   alt="JavaScript"
@@ -61,7 +61,7 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/Nodejs.svg"
+                  src="/assets/Node Js.svg"
                   width={102}
                   height={102}
                   alt="Nodejs"
@@ -79,7 +79,7 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/Python.png"
+                  src="/assets/Python.svg"
                   width={102}
                   height={102}
                   alt="Python"
@@ -88,7 +88,7 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/Tailwind CSS.png"
+                  src="/assets/Tailwindcss.svg"
                   width={102}
                   height={102}
                   alt="TailwindCSS"
@@ -97,7 +97,7 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/Docker.png"
+                  src="/assets/Docker.svg"
                   width={102}
                   height={102}
                   alt="Docker"
@@ -106,7 +106,7 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/TypeScript.png"
+                  src="/assets/TypeScript.svg"
                   width={102}
                   height={102}
                   alt="TypeScript"
@@ -115,7 +115,7 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/Nextjs.png"
+                  src="/assets/Nextjs.svg"
                   width={102}
                   height={102}
                   alt="Nextjs"
@@ -124,12 +124,12 @@ const TechStackFrame = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/Framer.png"
+                  src="/assets/Figma.svg"
                   width={102}
                   height={102}
                   alt="Framer"
                 />
-                <span className="font-NeueMachina">Framer</span>
+                <span className="font-NeueMachina">Figma</span>
               </div>
             </div>
           </div>

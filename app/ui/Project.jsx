@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { project } from "../lib/project";
 import Button from "./Button";
 import ProjectBox from "./ProjectBox";
@@ -17,21 +18,23 @@ const Project = () => {
       <div className="w-full flex -mt-15 flex-col gap-10 justify-center items-center">
         <div>
           {project.map((p) => (
-            <ProjectBox
-              key={p.id}
-              serialNo={p.serialNo}
-              name={p.name}
-              image={p.image}
-              tag1={p.tag1}
-              tag2={p.tag2}
-              tag3={p.tag3}
-            />
+            <Link key={p.id} href={p.link}>
+              <ProjectBox
+                key={p.id}
+                serialNo={p.serialNo}
+                name={p.name}
+                image={p.image}
+                tag1={p.tag1}
+                tag2={p.tag2}
+                tag3={p.tag3}
+              />
+            </Link>
           ))}
         </div>
       </div>
-      <div className="w-full -mt-6 flex justify-center items-center">
+      <Link href='/project' className="w-full -mt-6 flex justify-center items-center">
         <Button text="all-projects →" width={142} height={37} />
-      </div>
+      </Link>
     </div>
   );
 };

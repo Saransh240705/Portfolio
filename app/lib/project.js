@@ -7,6 +7,7 @@ export const project = [
     tag1: "React",
     tag2: "Express",
     tag3: "MongoDB",
+    link: '/project/Streamify',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const project = [
     tag1: "React",
     tag2: "Figma",
     tag3: "TailwindCSS",
+    link: '/project/PeaceHub',
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const project = [
     tag1: "React",
     tag2: "javaScript",
     tag3: "TailwindCSS",
+    link: '/project/Brainwave',
   },
 ];
 
@@ -37,6 +40,7 @@ export const projectsFull = [
     tag1: "React",
     tag2: "Express",
     tag3: "MongoDB",
+    link: '/project/Streamify',
   },
   {
     id: 2,
@@ -46,6 +50,7 @@ export const projectsFull = [
     tag1: "React",
     tag2: "Figma",
     tag3: "TailwindCSS",
+    link: '/project/PeaceHub',
   },
   {
     id: 3,
@@ -55,6 +60,7 @@ export const projectsFull = [
     tag1: "React",
     tag2: "javaScript",
     tag3: "TailwindCSS",
+    link: '/project/Brainwave',
   },
   {
     id: 4,
@@ -64,6 +70,7 @@ export const projectsFull = [
     tag1: "React",
     tag2: "ExpressJs",
     tag3: "MongoDB",
+    link: '/project/SafenGo',
   },
   {
     id: 5,
@@ -73,5 +80,6 @@ export const projectsFull = [
     tag1: "React",
     tag2: "Appwrite",
     tag3: "TailwindCSS",
+    link: '/project/MovieBase',
   },
 ];

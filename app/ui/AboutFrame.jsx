@@ -10,10 +10,10 @@ import { Minus, Square, X } from "lucide-react";
 
   return (
     <div>
-      <div>
-        <div className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 w-[700px] cursor-move">
+      <div className="">
+        <div className="flex justify-between  m-auto items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] xl:h-9 2xl:h-9 h-fit xl:w-[700px] 2xl:w-[700px] w-[350px]  cursor-move">
           <span className="font-NeueMachina pl-2 text-white">about-me</span>
-          <div className="flex gap-2 pr-2  items-center justify-center">
+          <div className="flex gap-2 xl:pr-2 2xl:pr-2  items-center justify-center">
             <span className="text-white">
               <Minus />
             </span>
@@ -25,7 +25,7 @@ import { Minus, Square, X } from "lucide-react";
             </span>
           </div>
         </div>
-        <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] h-[25rem] max-w-[700px] cursor-move">
+        <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] xl:h-[25rem] 2xl:h-[25rem] xl:max-w-[700px] 2xl:max-w-[700px] max-w-[350px] m-auto cursor-move">
           <ol className="list-decimal p-4 font-NeueMachina pt-2 text-[15px] pl-6 w-fit max-w-[700px]">
             <li>
               Hi, I’m <span className="code-green">Saransh</span> — a freelance <span className="code-blue">Full-Stack Web Developer</span> passionate
