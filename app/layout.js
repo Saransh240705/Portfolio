@@ -1,6 +1,5 @@
-import Navbar from "./ui/Navbar";
-import ClientLayout from "./ui/ClientLayout";
 import "./globals.css";
+
 
 export const metadata = {
   title: "Saransh | Portfolio",
@@ -13,12 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='bg-black text-white '>
-        <ClientLayout>
-          <main className="">
-            {children}
-          </main>
-        </ClientLayout>
+      <body className="bg-black text-white ">
+        <main className="">{children}</main>
       </body>
     </html>
   );

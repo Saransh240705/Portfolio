@@ -4,7 +4,7 @@ import Planet from "./Planet";
   return (
     <div>
       <div>
-        <div className="min-h-screen mt-20 relative flex items-center justify-center">
+        <div className="min-h-screen mt-28 relative flex items-center justify-center">
           <div className="absolute  -z-10">
             <Planet />
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect, } from "react";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,6 +9,9 @@ import AboutHome from "../ui/AboutHome"
 import AboutTwo from "../ui/AboutTwo"
 import TechStack from "../ui/TechStack"
 import Footer from "../ui/Footer";
+
+
+
 
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
@@ -30,7 +33,7 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <Suspense>
       <Frame />
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -40,7 +43,7 @@ const page = () => {
           <Footer />
         </div>
       </div>
-    </>
+    </Suspense>
   )
 }
 

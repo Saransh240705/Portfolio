@@ -1,141 +1,179 @@
+"use client";
 import { Minus, Square, X } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const TechStackFrame = () => {
+  const containerRef = useRef(null);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Header animation
+    gsap.fromTo(headerRef.current, 
+      {
+        y: -50,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          end: "top 50%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+
+    // Stagger animation for tech items
+    gsap.fromTo(".tech-item", 
+      {
+        y: 60,
+        opacity: 0,
+        scale: 0.8
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.6,
+        ease: "back.out(1.7)",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 70%",
+          end: "bottom 30%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
+  // Tech stack data
+  const techStack = [
+    { name: "HTML", icon: "/assets/Html 5.svg" },
+    { name: "CSS", icon: "/assets/CSS3.svg" },
+    { name: "JavaScript", icon: "/assets/JavaScript.svg" },
+    { name: "React", icon: "/assets/React.svg" },
+    { name: "Node.js", icon: "/assets/Node Js.svg" },
+    { name: "Express.js", icon: "/assets/Express Js.svg" },
+    { name: "Python", icon: "/assets/Python.svg" },
+    { name: "Tailwind CSS", icon: "/assets/Tailwindcss.svg" },
+    { name: "Docker", icon: "/assets/Docker.svg" },
+    { name: "TypeScript", icon: "/assets/TypeScript.svg" },
+    { name: "Next.js", icon: "/assets/Nextjs.svg" },
+    { name: "Figma", icon: "/assets/Figma.svg" },
+    { name: "Git", icon: "/assets/Git.svg" },
+    { name: "GitHub", icon: "/assets/GitHub.svg" },
+    { name: "NumPy", icon: "/assets/Numpy.svg" },
+    { name: "Matplotlib", icon: "/assets/Matplotlib.svg" },
+    { name: "MySQL", icon: "/assets/MySQL Logo.svg" },
+  ];
+
   return (
-    <div>
+    <motion.div
+      ref={containerRef}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div>
-        <div>
-          <div className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 w-[700px] ">
+        <div className="w-full h-full">
+          <motion.div 
+            ref={headerRef}
+            className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 min-w-[900px]"
+            whileHover={{ 
+              boxShadow: "0 0 20px rgba(255, 255, 255, 0.1)",
+              borderColor: "rgba(255, 255, 255, 0.3)"
+            }}
+            transition={{ duration: 0.3 }}
+          >
             <span className="font-NeueMachina pl-2 text-white">about-me</span>
-            <div className="flex gap-2 pr-2  items-center justify-center">
-              <span className="text-white">
+            <div className="flex gap-2 pr-2 items-center justify-center">
+              <motion.span 
+                className="text-white cursor-pointer"
+                whileHover={{ scale: 1.2, color: "#4949CE" }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <Minus />
-              </span>
-              <span className=" text-white">
+              </motion.span>
+              <motion.span 
+                className="text-white cursor-pointer"
+                whileHover={{ scale: 1.2, color: "#4949CE" }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <Square />
-              </span>
-              <span className="text-white">
+              </motion.span>
+              <motion.span 
+                className="text-white cursor-pointer"
+                whileHover={{ scale: 1.2, color: "#ff4444" }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <X />
-              </span>
+              </motion.span>
             </div>
-          </div>
-          <div className="border-white text-white rounded-bl-xl pt-3 rounded-br-xl bg-black border-[0.5px] h-[18rem] max-w-[800px] ">
-            <div className="grid grid-cols-6 grid-rows-5 gap-4">
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/HTML 5.svg"
-                  width={102}
-                  height={102}
-                  alt="HTML"
-                />
-                <span className="font-NeueMachina">HTML</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/CSS3.svg"
-                  width={102}
-                  height={102}
-                  alt="CSS"
-                />
-                <span className="font-NeueMachina">CSS</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/JavaScript.svg"
-                  width={102}
-                  height={102}
-                  alt="JavaScript"
-                />
-                <span className="font-NeueMachina">JavaScript</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/React.svg"
-                  width={102}
-                  height={102}
-                  alt="React"
-                />
-                <span className="font-NeueMachina">React</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/Node Js.svg"
-                  width={102}
-                  height={102}
-                  alt="Nodejs"
-                />
-                <span className="font-NeueMachina">NodeJs</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/Express Js.svg"
-                  width={102}
-                  height={102}
-                  alt="ExpressJs"
-                />
-                <span className="font-NeueMachina">ExpressJs</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/Python.svg"
-                  width={102}
-                  height={102}
-                  alt="Python"
-                />
-                <span className="font-NeueMachina">Python</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/Tailwindcss.svg"
-                  width={102}
-                  height={102}
-                  alt="TailwindCSS"
-                />
-                <span className="font-NeueMachina">Tailwindcss</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/Docker.svg"
-                  width={102}
-                  height={102}
-                  alt="Docker"
-                />
-                <span className="font-NeueMachina">Docker</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/TypeScript.svg"
-                  width={102}
-                  height={102}
-                  alt="TypeScript"
-                />
-                <span className="font-NeueMachina">TypeScript</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/Nextjs.svg"
-                  width={102}
-                  height={102}
-                  alt="Nextjs"
-                />
-                <span className="font-NeueMachina">Nextjs</span>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/Figma.svg"
-                  width={102}
-                  height={102}
-                  alt="Framer"
-                />
-                <span className="font-NeueMachina">Figma</span>
-              </div>
+          </motion.div>
+          <div className="border-white text-white rounded-bl-xl pt-3 rounded-br-xl bg-black border-[0.5px] h-fit min-w-[900px] ">
+            <div className="grid grid-cols-6 gap-4 p-4">
+              {techStack.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  className="tech-item flex flex-col justify-center items-center p-3 rounded-lg cursor-pointer"
+                  whileHover={{ 
+                    scale: 1.1,
+                    backgroundColor: "rgba(73, 73, 206, 0.1)",
+                    boxShadow: "0 8px 25px rgba(73, 73, 206, 0.2)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 300, 
+                    damping: 20 
+                  }}
+                >
+                  <motion.div
+                    whileHover={{ 
+                      rotate: [0, -5, 5, 0],
+                      transition: { duration: 0.4 }
+                    }}
+                  >
+                    <Image
+                      src={tech.icon}
+                      width={102}
+                      height={102}
+                      alt={tech.name}
+                      className="transition-all duration-300"
+                    />
+                  </motion.div>
+                  <motion.span 
+                    className="font-NeueMachina mt-2"
+                    whileHover={{ 
+                      color: "#4949CE",
+                      scale: 1.05 
+                    }}
+                  >
+                    {tech.name}
+                  </motion.span>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
