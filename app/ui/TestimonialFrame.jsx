@@ -3,7 +3,7 @@ import { Minus, Square, X } from "lucide-react";
 const TestimonialFrame = ({ id, name, desc }) => {
   return (
     <div>
-      <div className="flex -z-10 justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 w-[400px]">
+      <div className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 w-[400px]">
         <span className="font-NeueMachina pl-2 text-white">testimonials</span>
         <div className="flex gap-2 pr-2  items-center justify-center">
           <span className="text-white">

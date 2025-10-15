@@ -67,7 +67,7 @@ const Testimonial = ({color}) => {
 
 
   return (
-    <div ref={sectionRef} className="mt-40  mb-23 -z-50">
+    <div ref={sectionRef} className="mt-40  mb-23">
       <div className=" flex justify-center gap-12 items-center max-w-[34rem] text-center m-auto">
         <h1 ref={titleRef} className="text-5xl text-white font-ObjectSans ">
           Nice things <span className={`${color}`}> people say </span>
@@ -76,21 +76,22 @@ const Testimonial = ({color}) => {
       </div>
       <div ref={carouselRef} className="flex m-auto  max-w-[1370px] justify-center items-center mt-30 overflow-x-visible">
         <div className="flex h-full ">
-          <div className="max-w-[1370px] mx-auto overflow-x-hidden -z-50">
+          <div className="max-w-[1370px] mx-auto overflow-x-hidden">
             <Splide
               options={{
                 type: "loop", // Loop back to the beginning when reaching the end
                 autoScroll: {
-                  pauseOnHover: true, // Do not pause scrolling when hovering over the carousel
+                  pauseOnHover: true, // Pause scrolling when hovering over the carousel
                   pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
                   rewind: true, // Rewind to start when the end is reached
                   speed: 3, // Scrolling speed
                 },
                 arrows: false, // Hide navigation arrows
                 pagination: false, // Hide pagination dots
-                gap: "30px", // Negative gap to reduce spacing between slides
-
+                gap: "30px", // Gap between slides
                 fixedWidth: "400px",
+                drag: false, // Disable dragging to prevent conflicts with hover
+                wheel: false, // Disable wheel scrolling
               }}
               extensions={{ AutoScroll }} // Use the AutoScroll extension
             >
@@ -105,15 +106,17 @@ const Testimonial = ({color}) => {
                 options={{
                   type: "loop", // Loop back to the beginning when reaching the end
                   autoScroll: {
-                    pauseOnHover: true, // Do not pause scrolling when hovering over the carousel
+                    pauseOnHover: true, // Pause scrolling when hovering over the carousel
                     pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
                     rewind: true, // Rewind to start when the end is reached
-                    speed: -3, // Scrolling speed
+                    speed: -3, // Scrolling speed (negative for reverse direction)
                   },
                   arrows: false, // Hide navigation arrows
                   pagination: false, // Hide pagination dots
-                  gap: "30px", // Negative gap to reduce spacing between slides
+                  gap: "30px", // Gap between slides
                   fixedWidth: "400px",
+                  drag: false, // Disable dragging to prevent conflicts with hover
+                  wheel: false, // Disable wheel scrolling
                 }}
                 extensions={{ AutoScroll }} // Use the AutoScroll extension
               >
