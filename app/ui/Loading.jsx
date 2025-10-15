@@ -1,46 +1,44 @@
-"use client"; // required for hooks
+"use client";
 
 import { useState, useEffect } from "react";
+import Home from "./Home";
 
-export default function Loading() {
+export default function Page() {
   const [loading, setLoading] = useState(true);
   const [displayedText, setDisplayedText] = useState("");
 
-  const fullText = "Saransh"; // name to show
-  const typeSpeed = 150; // ms per letter
+  const fullText = "Saransh"; 
+  const typeSpeed = 150; 
+  const extraDelayAfterTyping = 1500; 
 
   useEffect(() => {
     let index = 0;
 
-    // Typewriter effect
     const typeInterval = setInterval(() => {
       setDisplayedText((prev) => prev + fullText[index]);
       index++;
-      if (index >= fullText.length) clearInterval(typeInterval);
+
+      if (index === fullText.length) {
+        clearInterval(typeInterval);
+        setTimeout(() => setLoading(false), extraDelayAfterTyping);
+      }
     }, typeSpeed);
 
-    // Hide loader after 10 seconds
-    const timer = setTimeout(() => setLoading(false), 10000);
-
-    return () => {
-      clearInterval(typeInterval);
-      clearTimeout(timer);
-    };
+    return () => clearInterval(typeInterval);
   }, []);
 
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-black text-white text-4xl font-mono">
         {displayedText}
-        <span className="animate-pulse">|</span> {/* blinking cursor */}
+        <span className="animate-pulse">|</span>
       </div>
     );
   }
 
   return (
     <div className="h-screen">
-      {/* Your 3D element here */}
-      <h1 className="text-2xl text-center mt-10">Your 3D scene is ready!</h1>
+      
     </div>
   );
 }

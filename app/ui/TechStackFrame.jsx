@@ -14,10 +14,11 @@ const TechStackFrame = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Header animation
-    gsap.fromTo(headerRef.current, 
+    gsap.fromTo(
+      headerRef.current,
       {
         y: -50,
-        opacity: 0
+        opacity: 0,
       },
       {
         y: 0,
@@ -28,17 +29,18 @@ const TechStackFrame = () => {
           trigger: containerRef.current,
           start: "top 80%",
           end: "top 50%",
-          toggleActions: "play none none reverse"
-        }
+          toggleActions: "play none none reverse",
+        },
       }
     );
 
     // Stagger animation for tech items
-    gsap.fromTo(".tech-item", 
+    gsap.fromTo(
+      ".tech-item",
       {
         y: 60,
         opacity: 0,
-        scale: 0.8
+        scale: 0.8,
       },
       {
         y: 0,
@@ -51,13 +53,13 @@ const TechStackFrame = () => {
           trigger: containerRef.current,
           start: "top 70%",
           end: "bottom 30%",
-          toggleActions: "play none none reverse"
-        }
+          toggleActions: "play none none reverse",
+        },
       }
     );
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -80,6 +82,7 @@ const TechStackFrame = () => {
     { name: "NumPy", icon: "/assets/Numpy.svg" },
     { name: "Matplotlib", icon: "/assets/Matplotlib.svg" },
     { name: "MySQL", icon: "/assets/MySQL Logo.svg" },
+    { name: "PostgreSQL", icon: "/assets/PostgreSQL.svg" },
   ];
 
   return (
@@ -92,38 +95,21 @@ const TechStackFrame = () => {
     >
       <div>
         <div className="w-full h-full">
-          <motion.div 
+          <motion.div
             ref={headerRef}
             className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 min-w-[900px]"
-            whileHover={{ 
-              boxShadow: "0 0 20px rgba(255, 255, 255, 0.1)",
-              borderColor: "rgba(255, 255, 255, 0.3)"
-            }}
-            transition={{ duration: 0.3 }}
           >
-            <span className="font-NeueMachina pl-2 text-white">about-me</span>
+            <span className="font-NeueMachina pl-2 text-white">tech</span>
             <div className="flex gap-2 pr-2 items-center justify-center">
-              <motion.span 
-                className="text-white cursor-pointer"
-                whileHover={{ scale: 1.2, color: "#4949CE" }}
-                whileTap={{ scale: 0.9 }}
-              >
+              <span className="text-white cursor-pointer">
                 <Minus />
-              </motion.span>
-              <motion.span 
-                className="text-white cursor-pointer"
-                whileHover={{ scale: 1.2, color: "#4949CE" }}
-                whileTap={{ scale: 0.9 }}
-              >
+              </span>
+              <span className="text-white cursor-pointer">
                 <Square />
-              </motion.span>
-              <motion.span 
-                className="text-white cursor-pointer"
-                whileHover={{ scale: 1.2, color: "#ff4444" }}
-                whileTap={{ scale: 0.9 }}
-              >
+              </span>
+              <span className="text-white cursor-pointer">
                 <X />
-              </motion.span>
+              </span>
             </div>
           </motion.div>
           <div className="border-white text-white rounded-bl-xl pt-3 rounded-br-xl bg-black border-[0.5px] h-fit min-w-[900px] ">
@@ -132,22 +118,22 @@ const TechStackFrame = () => {
                 <motion.div
                   key={index}
                   className="tech-item flex flex-col justify-center items-center p-3 rounded-lg cursor-pointer"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.1,
                     backgroundColor: "rgba(73, 73, 206, 0.1)",
-                    boxShadow: "0 8px 25px rgba(73, 73, 206, 0.2)"
+                    boxShadow: "0 8px 25px rgba(73, 73, 206, 0.2)",
                   }}
                   whileTap={{ scale: 0.95 }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 20 
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20,
                   }}
                 >
                   <motion.div
-                    whileHover={{ 
+                    whileHover={{
                       rotate: [0, -5, 5, 0],
-                      transition: { duration: 0.4 }
+                      transition: { duration: 0.4 },
                     }}
                   >
                     <Image
@@ -158,11 +144,11 @@ const TechStackFrame = () => {
                       className="transition-all duration-300"
                     />
                   </motion.div>
-                  <motion.span 
+                  <motion.span
                     className="font-NeueMachina mt-2"
-                    whileHover={{ 
+                    whileHover={{
                       color: "#4949CE",
-                      scale: 1.05 
+                      scale: 1.05,
                     }}
                   >
                     {tech.name}
