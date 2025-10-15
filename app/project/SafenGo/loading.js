@@ -1,5 +1,5 @@
 
-import Loading from '../ui/Loading'
+import Loading from '../../ui/Loading'
 
 const loading = () => {
   return (
