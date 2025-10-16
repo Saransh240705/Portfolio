@@ -114,7 +114,7 @@ In a mobile world, responsive isn't optional. I design and develop with mobile u
 ### 🎓 Always Learning
 I believe in continuous growth. Currently diving deeper into:
 - **Advanced React Patterns** and **Next.js 15** features
-- **TypeScript** best practices and advanced types
+- **Javacript** best practices and advanced types
 - **Database Design** and **System Architecture**
 - **UI/UX Principles** and **Accessibility Standards**
 
@@ -133,7 +133,7 @@ I'm always excited to connect with fellow developers, designers, and anyone pass
 - **Portfolio**: [Live Demo](https://saransh-portfolio-theta.vercel.app/)
 - **GitHub**: [@Saransh240705](https://github.com/Saransh240705)
 - **LinkedIn**: [Connect with me](www.linkedin.com/in/saransh-b3729022b)
-- **Email**: [your.email@example.com](mailto:vsaransh6@gmail.com)
+- **Email**: [vsaransh6@gmail.com](mailto:vsaransh6@gmail.com)
 
 ### 💬 What I'm Looking For
 - **Collaboration** on exciting projects
@@ -151,7 +151,7 @@ I'm always excited to connect with fellow developers, designers, and anyone pass
 - **Next.js 15** with App Router - Modern React framework
 - **GSAP ScrollTrigger** - Bidirectional scroll animations
 - **3D Planet Integration** - Spline-powered interactive elements
-- **TypeScript** - Type-safe development
+- **JavaScript** - Type-safe development
 - **Tailwind CSS** - Utility-first styling approach
 
 ### � Performance Features
