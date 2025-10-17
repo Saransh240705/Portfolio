@@ -83,7 +83,7 @@ export default function Frame() {
               <span style={{ color: themeColors.accent }}>&lt;S&gt;</span>
               aransh
             </Link>
-            
+
             {/* Hamburger Menu */}
             <HamburgerMenu />
           </div>
@@ -100,32 +100,36 @@ export default function Frame() {
           />
 
           {/* Center text */}
-          <p className="font-NeueMachina text-white text-sm">
-            Based In India
-          </p>
+          <p className="font-NeueMachina text-white text-sm">Based In India</p>
 
           {/* Right section with social links and CTA */}
           <div className="flex items-center gap-4">
             {/* Social Links */}
-            <div className="flex gap-3">
-              <a
-                href="https://github.com/Saransh240705"
-                className="text-white transition-colors duration-200 hover:opacity-80"
-                style={{ color: 'white' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = themeColors.accent)}
-                onMouseLeave={(e) => (e.currentTarget.style.color = 'white')}
-              >
-                <GithubIcon className="size-5" />
-              </a>
-              <a
-                href="https://linkedin.com/in/saransh-b3729022b"
-                className="text-white transition-colors duration-200 hover:opacity-80"
-                style={{ color: 'white' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = themeColors.accent)}
-                onMouseLeave={(e) => (e.currentTarget.style.color = 'white')}
-              >
-                <LinkedinIcon className="size-5" />
-              </a>
+            <div className="hidden lg:block xl:block 2xl:block">
+              <div className="flex gap-3">
+                <a
+                  href="https://github.com/Saransh240705"
+                  className="text-white transition-colors duration-200 hover:opacity-80"
+                  style={{ color: "white" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = themeColors.accent)
+                  }
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+                >
+                  <GithubIcon className="size-5" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/saransh-b3729022b"
+                  className="text-white transition-colors duration-200 hover:opacity-80"
+                  style={{ color: "white" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = themeColors.accent)
+                  }
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+                >
+                  <LinkedinIcon className="size-5" />
+                </a>
+              </div>
             </div>
 
             {/* CTA Button */}

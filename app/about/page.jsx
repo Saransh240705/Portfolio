@@ -7,8 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Frame from "../ui/Frame"
 import AboutHome from "../ui/AboutHome"
 import AboutTwo from "../ui/AboutTwo"
-import TechStack from "../ui/TechStack"
-import Footer from "../ui/Footer";
+import TechStack from "../ui/TechStack";
 
 
 
@@ -40,7 +39,6 @@ const page = () => {
           <AboutHome />
           <AboutTwo />
           <TechStack />
-          <Footer />
         </div>
       </div>
     </Suspense>

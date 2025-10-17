@@ -11,47 +11,47 @@ import Collaboration from "./Collaboration";
 
 const PeaceHub = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden w-full">
       <div>
         <div className="bg-[#91D2F9] h-[9rem] w-[9rem] -z-100 top-[35rem] left-[15rem] absolute rounded-full blur-[6rem]" />
         <div className="bg-[#91D2F9] h-[9rem] w-[9rem] -z-100 top-[15rem] right-[15rem] absolute rounded-full blur-[6rem]" />
-        <div className="flex h-[25rem] w-full items-center justify-center">
-          <span className="font-NeueMachina">PROJECT</span>
+        <div className="flex h-[15rem] sm:h-[20rem] md:h-[25rem] w-full items-center justify-center">
+          <span className="font-NeueMachina text-sm sm:text-base">PROJECT</span>
         </div>
-        <div className="flex justify-center flex-col gap-12 items-center">
-          <h1 className="font-ObjectSans text-7xl">PeaceHub</h1>
-          <div className="ml-6 justify-center items-center w-full  flex gap-2 font-NeueMachina ">
-            <span className="border w-fit border-color rounded-3xl pl-2 pr-2 text-center">
+        <div className="flex justify-center flex-col gap-6 sm:gap-8 md:gap-12 items-center px-4">
+          <h1 className="font-ObjectSans text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center">PeaceHub</h1>
+          <div className="justify-center items-center w-full flex gap-2 font-NeueMachina flex-wrap">
+            <span className="border w-fit border-color rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
               React
             </span>
-            <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center">
+            <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
               Figma
             </span>
-            <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center">
+            <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
               TailwindCSS
             </span>
           </div>
         </div>
 
-        <div className="flex justify-center items-center mt-38">
+        <div className="flex justify-center items-center mt-20 sm:mt-28 md:mt-38 px-4">
           <Image
             src="/assets/PeaceHub.jpeg"
             width={800}
             height={600}
             alt="PeaceHub"
-            className="rounded-lg"
+            className="rounded-lg w-full max-w-[320px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[800px] h-auto"
           />
         </div>
 
-        <div className="max-w-[1350px] m-auto ml-20 flex mt-36 mb-24">
-          <div className="w-[70%] font-NeueMachina">
+        <div className="max-w-[1350px] m-auto px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col lg:flex-row mt-20 sm:mt-28 md:mt-36 mb-16 sm:mb-20 md:mb-24 gap-8 lg:gap-0">
+          <div className="w-full lg:w-[70%] font-NeueMachina">
             <div className="font-NeueMachina flex flex-col">
-              <span className="code-aqua">Year</span>
-              <span>2025</span>
+              <span className="code-aqua text-sm sm:text-base">Year</span>
+              <span className="text-sm sm:text-base">2025</span>
             </div>
-            <div className="mt-16">
-              <span className="code-aqua">engagement</span>
-              <p>
+            <div className="mt-8 sm:mt-12 md:mt-16">
+              <span className="code-aqua text-sm sm:text-base">engagement</span>
+              <p className="text-sm sm:text-base leading-relaxed mt-2">
                 PeaceHub is a full-stack web application designed to promote
                 mental wellness through journaling, mood tracking, and
                 supportive community interactions. The goal was to create a
@@ -69,89 +69,92 @@ const PeaceHub = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col ml-43 gap-12">
+          <div className="flex flex-col lg:ml-43 gap-8 sm:gap-10 md:gap-12">
             <div>
-              <span className="code-aqua ">services</span>
-              <div className="flex flex-col gap-2">
-                <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center">
+              <span className="code-aqua text-sm sm:text-base">services</span>
+              <div className="flex flex-col gap-2 mt-2">
+                <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
                   Front-end-development
                 </span>
-                <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center">
+                <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
                   Animation
                 </span>
-                <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center">
+                <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
                   Design
                 </span>
               </div>
             </div>
-            <Link href="https://peace-hub-six.vercel.app/">
-              <Button text="visit-website↗" width="10rem" height="4rem" />
-            </Link>
-            <Link href="https://github.com/Saransh240705/PeaceHub.git">
-              <Button text="visit-code↗" width="10rem" height="4rem" />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="https://peace-hub-six.vercel.app/">
+                <Button text="visit-website↗" width="9rem" height="3.5rem" />
+              </Link>
+              <Link href="https://github.com/Saransh240705/PeaceHub.git">
+                <Button text="visit-code↗" width="9rem" height="3.5rem" />
+              </Link>
+            </div>
 
           </div>
         </div>
 
-        <div className="w-full flex mt-15 justify-center items-center mb-16">
-          <h1 className="text-4xl">
+        <div className="w-full flex mt-10 sm:mt-12 md:mt-15 justify-center items-center mb-10 sm:mb-12 md:mb-16">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">
             Up <span className="code-aqua">Next</span>
           </h1>
         </div>
-        <div className="flex justify-center mt-30 items-center w-full">
+        <div className="flex justify-center mt-16 sm:mt-20 md:mt-30 items-center w-full px-4">
           <Link
             href="/project/Brainwave"
           >
-            <div className="flex transparent mb-20 xl:min-w-[1000px] 2xl:min-w-[1000px] max-w-[380px] xl:h-[15rem] 2xl:h-[15rem] h-[18rem] group border rounded-2xl justify-between items-center pl-5 pr-5">
-              <div>
-                <div className="flex group gap-2">
-                  <p className="code-content font-NeueMachina ">03</p>
-                  <h1 className="xl:text-4xl 2xl:text-4xl text-2xl font-ObjectSans mb-1">
+            <div className="flex transparent mb-12 sm:mb-16 md:mb-20 w-full max-w-[380px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] h-auto sm:h-[12rem] md:h-[15rem] lg:h-[15rem] group border rounded-2xl justify-between items-center p-4 sm:pl-5 sm:pr-5">
+              <div className="flex-1">
+                <div className="flex group gap-2 items-center">
+                  <p className="code-content font-NeueMachina text-sm sm:text-base">03</p>
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-ObjectSans mb-1">
                     Brainwave
                   </h1>
                 </div>
-                <div className="ml-6 group  w-full flex gap-2 font-NeueMachina ">
-                  <span className="border w-fit border-color rounded-3xl pl-2 pr-2 text-center">
+                <div className="sm:ml-6 group w-full flex gap-2 font-NeueMachina flex-wrap mt-2">
+                  <span className="border w-fit border-color rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
                     React
                   </span>
-                  <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center">
+                  <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
                     JavaScript
                   </span>
-                  <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center">
+                  <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
                     TailwindCSS
                   </span>
                 </div>
               </div>
-              <div className="flex group xl:none 2xl:none  xl:gap-23 2xl:gap-23 xl:items-center 2xl:items-center">
-                <div className="-mt-20 relative border rounded-2xl hover:scale-120 ease-in-out duration-200 mb-6">
+              <div className="hidden sm:flex group items-center gap-4">
+                <div className="relative border rounded-2xl hover:scale-110 ease-in-out duration-200">
                   <Image
                     className="rounded-2xl"
                     src="/assets/Brainwave.jpeg"
                     width={433}
                     height={110}
+                    alt="Brainwave"
                   />
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="font-NeueMachina font-thin">2025</div>
-                  <div className="font-NeueMachina font-thin text-2xl">↗</div>
+                  <div className="font-NeueMachina font-thin text-sm">2025</div>
+                  <div className="font-NeueMachina font-thin text-xl">↗</div>
                 </div>
               </div>
             </div>
           </Link>
         </div>
 
-        <div className="flex justify-center items-center w-full mt-22 mb-18">
-          <div className="   -z-50">
-            <div className=" flex justify-center gap-12 items-center max-w-[34rem] text-center m-auto">
-              <h1 className="text-5xl text-white font-ObjectSans ">
+        <div className="flex justify-center items-center w-full mt-16 sm:mt-18 md:mt-22 mb-12 sm:mb-15 md:mb-18 px-4">
+          <div className="-z-50">
+            <div className="flex justify-center gap-6 sm:gap-8 md:gap-12 items-center max-w-[20rem] sm:max-w-[28rem] md:max-w-[34rem] text-center m-auto">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl text-white font-ObjectSans">
                 Nice things <span className="code-aqua"> people say </span>
                 about my work
               </h1>
             </div>
-            <div className="flex m-auto  max-w-[1370px] justify-center items-center mt-30 overflow-x-visible">
-              <div className="flex h-full ">
-                <div className="max-w-[1370px] mx-auto overflow-x-hidden -z-50">
+            <div className="flex m-auto max-w-[1370px] justify-center items-center mt-16 sm:mt-20 md:mt-30 overflow-hidden">
+              <div className="flex h-full w-full">
+                <div className="w-full mx-auto overflow-hidden -z-50">
                   <Splide
                     options={{
                       type: "loop", // Loop back to the beginning when reaching the end

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import AboutFrame from "./AboutFrame";
 import { motion } from "framer-motion";
 import PortraitFrame from "./PortraitFrame";
@@ -20,6 +20,21 @@ const About = () => {
   const collaborationFrameRef = useRef(null);
   const whereIWorkFrameRef = useRef(null);
   const buttonRef = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Check if it's desktop size
+    const checkIsDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024); // lg breakpoint and above
+    };
+
+    checkIsDesktop();
+    window.addEventListener('resize', checkIsDesktop);
+
+    return () => {
+      window.removeEventListener('resize', checkIsDesktop);
+    };
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -129,36 +144,41 @@ const About = () => {
         <div className="relative m-auto flex">
           <motion.div
             ref={aboutFrameRef}
-            className="absolute ml-7 xl:ml-18 2xl:ml-18"
-            drag
+            className="absolute -ml-5 xl:ml-18 2xl:ml-18"
+            drag={isDesktop}
+            dragConstraints={isDesktop ? constraintref : undefined}
           >
             <AboutFrame />
           </motion.div>
           <motion.div
             ref={portraitFrameRef}
             className="absolute xl:mt-55 xl:ml-190 ml-52 mt-235"
-            drag
+            drag={isDesktop}
+            dragConstraints={isDesktop ? constraintref : undefined}
           >
             <PortraitFrame />
           </motion.div>
           <motion.div
             ref={meOnlineRef}
             className="absolute xl:mt-130 xl:ml-115 2xl:mt-130 2xl:ml-115 mt-235 inset-0"
-            drag
+            drag={isDesktop}
+            dragConstraints={isDesktop ? constraintref : undefined}
           >
             <MeOnline />
           </motion.div>
           <motion.div
             ref={collaborationFrameRef}
             className="absolute hidden xl:block 2xl:block mt-107 ml-140"
-            drag
+            drag={isDesktop}
+            dragConstraints={isDesktop ? constraintref : undefined}
           >
             <CollaborationFrame />
           </motion.div>
           <motion.div
             ref={whereIWorkFrameRef}
             className="absolute xl:mt-107 2xl:mt-107 mt-198"
-            drag
+            drag={isDesktop}
+            dragConstraints={isDesktop ? constraintref : undefined}
           >
             <WhereIWorkFrame />
           </motion.div>

@@ -120,3 +120,17 @@
     margin-left: -17rem; /* Custom margin for last project on 2xl screens */
   }
 }
+
+/* Hamburger menu animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}

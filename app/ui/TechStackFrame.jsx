@@ -86,38 +86,40 @@ const TechStackFrame = () => {
   ];
 
   return (
-    <motion.div
-      ref={containerRef}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.3 }}
-    >
-      <div>
-        <div className="w-full h-full">
-          <motion.div
-            ref={headerRef}
-            className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 min-w-[900px]"
-          >
-            <span className="font-NeueMachina pl-2 text-white">tech</span>
+    <div className="flex justify-center items-center w-full">
+      <motion.div
+        ref={containerRef}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full max-w-sm mx-auto"
+      >
+        <div>
+          <div className="w-full h-full">
+            <motion.div
+              ref={headerRef}
+              className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 w-full"
+            >
+            <span className="font-NeueMachina pl-2 text-white text-sm sm:text-base">tech</span>
             <div className="flex gap-2 pr-2 items-center justify-center">
               <span className="text-white cursor-pointer">
-                <Minus />
+                <Minus className="w-4 h-4 sm:w-5 sm:h-5" />
               </span>
               <span className="text-white cursor-pointer">
-                <Square />
+                <Square className="w-4 h-4 sm:w-5 sm:h-5" />
               </span>
               <span className="text-white cursor-pointer">
-                <X />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </span>
             </div>
           </motion.div>
-          <div className="border-white text-white rounded-bl-xl pt-3 rounded-br-xl bg-black border-[0.5px] h-fit min-w-[900px] ">
-            <div className="grid grid-cols-6 gap-4 p-4">
+          <div className="border-white text-white rounded-bl-xl pt-3 rounded-br-xl bg-black border-[0.5px] h-fit w-full">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4 p-3 sm:p-4">
               {techStack.map((tech, index) => (
                 <motion.div
                   key={index}
-                  className="tech-item flex flex-col justify-center items-center p-3 rounded-lg cursor-pointer"
+                  className="tech-item flex flex-col justify-center items-center p-2 sm:p-3 rounded-lg cursor-pointer"
                   whileHover={{
                     scale: 1.1,
                     backgroundColor: "rgba(73, 73, 206, 0.1)",
@@ -141,11 +143,11 @@ const TechStackFrame = () => {
                       width={102}
                       height={102}
                       alt={tech.name}
-                      className="transition-all duration-300"
+                      className="transition-all duration-300 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                     />
                   </motion.div>
                   <motion.span
-                    className="font-NeueMachina mt-2"
+                    className="font-NeueMachina mt-1 sm:mt-2 text-xs sm:text-sm md:text-base text-center"
                     whileHover={{
                       color: "#4949CE",
                       scale: 1.05,
@@ -159,7 +161,8 @@ const TechStackFrame = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

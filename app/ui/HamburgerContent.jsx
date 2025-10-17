@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { hamburger } from "../lib/hamburger";
 import { Github, Instagram, Linkedin } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Button from "./Button";
 
 const HamburgerContent = () => {
   const pathname = usePathname();
@@ -10,11 +11,11 @@ const HamburgerContent = () => {
   const getColours = () => {
     switch (pathname) {
       case "/about":
-        return { accent: "#4949CE" };
+        return { accent: "#E24E62" };
       case "/project":
-        return { accent: "#4949CE" };
+        return { accent: "#91D2F9" };
       case "/contact-me":
-        return { accent: "#4949CE" };
+        return { accent: "#4D81ED" };
       default:
         return { accent: "#4949CE" };
     }
@@ -27,8 +28,8 @@ const HamburgerContent = () => {
       <Link className="flex gap-4 mb-10 items-center" href="/">
         <span className="font-NeueMachina code-content">01</span>
         <span
-          style={{ color: colours.accent }}
-          className="font-ObjectSans text-white text-2xl"
+          style={{ color: pathname === "/" ? colours.accent : "white" }}
+          className="font-ObjectSans text-2xl"
         >
           home
         </span>
@@ -36,8 +37,8 @@ const HamburgerContent = () => {
       <Link className="flex gap-4 mb-10 items-center" href="/about">
         <span className="font-NeueMachina code-content">02</span>
         <span
-          style={{ color: colours.accent }}
-          className="font-ObjectSans text-white text-2xl"
+          style={{ color: pathname === "/about" ? colours.accent : "white" }}
+          className="font-ObjectSans text-2xl"
         >
           about
         </span>
@@ -45,8 +46,8 @@ const HamburgerContent = () => {
       <Link className="flex gap-4 mb-10 items-center" href="/project">
         <span className="font-NeueMachina code-content">03</span>
         <span
-          style={{ color: colours.accent }}
-          className="font-ObjectSans text-white text-2xl"
+          style={{ color: pathname === "/project" ? colours.accent : "white" }}
+          className="font-ObjectSans text-2xl"
         >
           projects
         </span>
@@ -54,8 +55,8 @@ const HamburgerContent = () => {
       <Link className="flex gap-4 mb-10 items-center" href="/contact-me">
         <span className="font-NeueMachina code-content">04</span>
         <span
-          style={{ color: colours.accent }}
-          className="font-ObjectSans text-white text-2xl"
+          style={{ color: pathname === "/contact-me" ? colours.accent : "white" }}
+          className="font-ObjectSans text-2xl"
         >
           contact-me
         </span>
@@ -72,6 +73,9 @@ const HamburgerContent = () => {
           <Instagram />
         </Link>
       </div>
+      <Link href="/contact-me" className="m-auto mt-6">
+        <Button text="let's-in-touch↗" width={160} height={32} />
+      </Link>
     </div>
   );
 };
