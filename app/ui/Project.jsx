@@ -90,7 +90,6 @@ const Project = () => {
     };
   }, []);
 
-const Project = () => {
   return (
     <div ref={sectionRef} className="text-white mt-15 relative">
       <div className="bg-[#4949CE] h-[9rem] w-[9rem] -z-100 mt-220 ml-34 absolute rounded-full blur-[6rem]" />
@@ -100,11 +99,11 @@ const Project = () => {
           Project <span className="text-highlighted">Highlight</span>
         </h1>
       </div>
-      <div ref={projectsContainerRef} className="w-full flex -mt-15 flex-col gap-10 justify-center items-center">
+      <div ref={projectsContainerRef} className="w-full flex xl:-mt-15 lg:-mt-15 2xl:-mt-15 -mt-34 flex-col gap-10 justify-center items-center">
         <div>
-          {project.map((p) => (
+          {project.map((p, index) => (
             <Link key={p.id} href={p.link}>
-              <div className="project-box">
+              <div className={`project-box ${index === project.length - 1 ? 'last-project' : ''}`}>
                 <ProjectBox
                   key={p.id}
                   serialNo={p.serialNo}
@@ -113,6 +112,7 @@ const Project = () => {
                   tag1={p.tag1}
                   tag2={p.tag2}
                   tag3={p.tag3}
+                  isLast={index === project.length - 1}
                 />
               </div>
             </Link>
@@ -126,7 +126,6 @@ const Project = () => {
       </Link>
     </div>
   );
-};
 };
 
 export default Project;

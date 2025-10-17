@@ -92,6 +92,7 @@
 #smooth-content {
   overflow: visible;
   width: 100%;
+  padding-bottom: 20px; /* Ensure Footer has space to appear */
 }
 
 /* Optional: Add some scroll effects */
@@ -101,4 +102,21 @@
 
 .scroll-fast {
   will-change: transform;
+}
+
+/* Fix last project alignment */
+.project-box:last-child .xl\:-ml-66 {
+  margin-left: -17rem; /* Adjust this value as needed */
+}
+
+@media (min-width: 1280px) {
+  .project-box:last-child .xl\:-ml-66 {
+    margin-left: -17rem; /* Custom margin for last project on xl screens */
+  }
+}
+
+@media (min-width: 1536px) {
+  .project-box:last-child .xl\:-ml-66 {
+    margin-left: -17rem; /* Custom margin for last project on 2xl screens */
+  }
 }

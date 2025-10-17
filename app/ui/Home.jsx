@@ -112,7 +112,7 @@ export default function Home() {
         ref={planetRef}
         className="absolute inset-0 w-full h-full -z-10 flex items-center  justify-center"
       >
-        <div className="w-full h-full max-w-none scale-95 sm:scale-90 md:scale-100 lg:scale-110 xl:scale-125">
+        <div className="w-full h-full m-0 p-0 max-w-none scale-100 sm:scale-90 md:scale-100 lg:scale-110 xl:scale-125">
           <Planet />
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function Home() {
       <div className="text-center px-4 sm:px-6 md:px-8 w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-5xl mx-auto z-10">
         <h1
           ref={titleRef}
-          className="text-white text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-8xl 2xl:text-5xl leading-tight mb-6 sm:mb-8 font-ObjectSans"
+          className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-8xl 2xl:text-5xl leading-tight mb-6 sm:mb-8 font-ObjectSans"
         >
           Hi, I'm <span className="text-highlighted">Saransh</span>,<br />
           an innovative developer

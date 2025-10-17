@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Button from "./Button";
+import HamburgerMenu from "./Hamburger";
 
 export default function Frame() {
   const pathname = usePathname();
@@ -72,172 +73,184 @@ export default function Frame() {
   const themeColors = getThemeColors();
 
   return (
-    <div className="relative z-50  ">
-      {/* //top-bottom */}
-      <div className="fixed flex backdrop-blur-xs justify-between flex-col z-50">
-        <div className="w-[100vw] h-[3rem] border-[0.5px] border-gray-600">
-          <div className=" h-full  flex items-center justify-center text-center font-NeueMachina text-white">
-            <Link href="/">
-              <p className="cursor-pointer">
-                <span style={{ color: themeColors.accent }}>&lt;S&gt;</span>
-                aransh
-              </p>
+    <div className="relative z-50">
+      {/* Top Navigation Bar */}
+      <div className="fixed top-0 w-full z-50 backdrop-blur-sm">
+        <div className="w-full h-12 border-b border-gray-600 bg-black/50">
+          <div className="h-full flex items-center justify-between px-4">
+            {/* Logo */}
+            <Link href="/" className="font-NeueMachina text-white">
+              <span style={{ color: themeColors.accent }}>&lt;S&gt;</span>
+              aransh
             </Link>
-          </div>
-        </div>
-        <div className="absolute backdrop-blur-lg z-50 w-[100vw] h-[3rem] border-[0.5px] top-[54.67rem] flex items-center p-4 border-gray-600">
-          <div
-            className="h-5 w-5 text rounded-full transition-colors duration-300"
-            style={{ backgroundColor: themeColors.accent }}
-          />
-          <div
-            className="h-5 w-5 right-[1rem] absolute rounded-full transition-colors duration-300"
-            style={{ backgroundColor: themeColors.accent }}
-          />
-          <p className="absolute text-center font-NeueMachina left-[42rem] text-white">
-            Based In India
-          </p>
-          <div className="flex absolute gap-3 left-[65rem]">
-            <a
-              href="https://github.com/Saransh240705"
-              className="text-white transition-colors duration-200"
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.color = themeColors.accent)
-              }
-              onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
-            >
-              <GithubIcon className="size-6 cursor-pointer" />
-            </a>
-            <a
-              href="https://linkedin.com/in/saransh-b3729022b"
-              className="text-white transition-colors duration-200"
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.color = themeColors.accent)
-              }
-              onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
-            >
-              <LinkedinIcon className="size-6 cursor-pointer" />
-            </a>
-          </div>
-          <div
-            className="text-white rounded-sm group cursor-pointer max-w-[14rem] max-h-[2rem] overflow-hidden flex absolute gap-2 items-center right-[5rem] border border-gray-600 font-NeueMachina transition-colors duration-200"
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.borderColor = themeColors.accent)
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.borderColor = "#4b5563")
-            }
-          >
-            <Link href="/contact-me">
-              <Button
-                text="let's-work-together →"
-                width={235}
-                height={32}
-                themeColor={themeColors.accent}
-              />
-            </Link>
+            
+            {/* Hamburger Menu */}
+            <HamburgerMenu />
           </div>
         </div>
       </div>
-      {/* left-right */}
-      <div className="flex justify-between ">
-        <div>
-          <nav className=" border-[0.5px] fixed flex items-center justify-center border-gray-600 w-fit h-[100vh] text-gray-400 p-4 z-50">
-            <ul className="flex flex-col gap-4">
-              <li>
-                <Link
-                  href="/"
-                  className={clsx(
-                    "block transition-colors duration-200 rounded",
-                    pathname === "/"
-                      ? "text-highlighted"
-                      : "text-gray-400 hover:text-white"
-                  )}
-                >
-                  <House
-                    className="pointer-events-none"
-                    width={18}
-                    height={18}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className={clsx(
-                    "block transition-colors duration-200 rounded",
-                    pathname === "/about"
-                      ? "text-white"
-                      : "text-gray-400 hover:text-white"
-                  )}
-                >
-                  <Image
-                    src="/assets/Person.svg"
-                    alt="about"
-                    width={18}
-                    height={18}
-                    className="pointer-events-none"
-                    style={{
-                      filter:
-                        pathname === "/about" ? themeColors.iconFilter : "none",
-                    }}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/project"
-                  className={clsx(
-                    "block transition-colors duration-200 rounded",
-                    pathname === "/project"
-                      ? "text-white"
-                      : "text-gray-400 hover:text-white"
-                  )}
-                >
-                  <Image
-                    src="/assets/Laptop Coding.svg"
-                    alt="projects"
-                    width={18}
-                    height={18}
-                    className="pointer-events-none"
-                    style={{
-                      filter:
-                        pathname === "/project"
-                          ? themeColors.iconFilter
-                          : "none",
-                    }}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact-me"
-                  className={clsx(
-                    "block transition-colors duration-200 rounded",
-                    pathname === "/contact-me"
-                      ? "text-white"
-                      : "text-gray-400 hover:text-white"
-                  )}
-                >
-                  <Image
-                    src="/assets/Mail.svg"
-                    alt="contact-me"
-                    width={18}
-                    height={18}
-                    className="pointer-events-none"
-                    style={{
-                      filter:
-                        pathname === "/contact-me"
-                          ? themeColors.iconFilter
-                          : "none",
-                    }}
-                  />
-                </Link>
-              </li>
-            </ul>
-          </nav>
+
+      {/* Bottom Status Bar */}
+      <div className="fixed bottom-0 w-full z-50 backdrop-blur-sm">
+        <div className="w-full h-12 border-t border-gray-600 bg-black/50 flex items-center justify-between px-4">
+          {/* Left indicator */}
+          <div
+            className="h-3 w-3 rounded-full transition-colors duration-300"
+            style={{ backgroundColor: themeColors.accent }}
+          />
+
+          {/* Center text */}
+          <p className="font-NeueMachina text-white text-sm">
+            Based In India
+          </p>
+
+          {/* Right section with social links and CTA */}
+          <div className="flex items-center gap-4">
+            {/* Social Links */}
+            <div className="flex gap-3">
+              <a
+                href="https://github.com/Saransh240705"
+                className="text-white transition-colors duration-200 hover:opacity-80"
+                style={{ color: 'white' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = themeColors.accent)}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'white')}
+              >
+                <GithubIcon className="size-5" />
+              </a>
+              <a
+                href="https://linkedin.com/in/saransh-b3729022b"
+                className="text-white transition-colors duration-200 hover:opacity-80"
+                style={{ color: 'white' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = themeColors.accent)}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'white')}
+              >
+                <LinkedinIcon className="size-5" />
+              </a>
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden lg:block">
+              <Link href="/contact-me">
+                <Button
+                  text="let's-work-together →"
+                  width={200}
+                  height={28}
+                  themeColor={themeColors.accent}
+                />
+              </Link>
+            </div>
+
+            {/* Right indicator */}
+            <div
+              className="h-3 w-3 rounded-full transition-colors duration-300"
+              style={{ backgroundColor: themeColors.accent }}
+            />
+          </div>
         </div>
-        <div className="fixed right-0 h-[100vh] w-[3rem] border-[0.5px] border-gray-600"></div>
+      </div>
+      {/* Side Navigation - Desktop Only */}
+      <div className="hidden xl:block lg:block 2xl:block">
+        <div className="flex justify-between">
+          <div>
+            <nav className="border-r border-gray-600 fixed left-0 top-12 bottom-12 flex items-center justify-center w-16 text-gray-400 z-40">
+              <ul className="flex flex-col gap-6">
+                <li>
+                  <Link
+                    href="/"
+                    className={clsx(
+                      "block transition-colors duration-200 rounded p-2",
+                      pathname === "/"
+                        ? "text-highlighted"
+                        : "text-gray-400 hover:text-white"
+                    )}
+                  >
+                    <House
+                      className="pointer-events-none"
+                      width={18}
+                      height={18}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className={clsx(
+                      "block transition-colors duration-200 rounded p-2",
+                      pathname === "/about"
+                        ? "text-white"
+                        : "text-gray-400 hover:text-white"
+                    )}
+                  >
+                    <Image
+                      src="/assets/Person.svg"
+                      alt="about"
+                      width={18}
+                      height={18}
+                      className="pointer-events-none"
+                      style={{
+                        filter:
+                          pathname === "/about"
+                            ? themeColors.iconFilter
+                            : "none",
+                      }}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/project"
+                    className={clsx(
+                      "block transition-colors duration-200 rounded p-2",
+                      pathname === "/project"
+                        ? "text-white"
+                        : "text-gray-400 hover:text-white"
+                    )}
+                  >
+                    <Image
+                      src="/assets/Laptop Coding.svg"
+                      alt="projects"
+                      width={18}
+                      height={18}
+                      className="pointer-events-none"
+                      style={{
+                        filter:
+                          pathname === "/project"
+                            ? themeColors.iconFilter
+                            : "none",
+                      }}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact-me"
+                    className={clsx(
+                      "block transition-colors duration-200 rounded p-2",
+                      pathname === "/contact-me"
+                        ? "text-white"
+                        : "text-gray-400 hover:text-white"
+                    )}
+                  >
+                    <Image
+                      src="/assets/Mail.svg"
+                      alt="contact-me"
+                      width={18}
+                      height={18}
+                      className="pointer-events-none"
+                      style={{
+                        filter:
+                          pathname === "/contact-me"
+                            ? themeColors.iconFilter
+                            : "none",
+                      }}
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div className="fixed right-0 top-12 bottom-12 w-4 border-l border-gray-600"></div>
+        </div>
       </div>
     </div>
   );

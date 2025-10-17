@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const Collaboration = () => {
   return (
-    <div className="mt-50 mb-12 flex justify-center items-center">
+    <div className="mt-50 mb-12 flex wrap-normal justify-center items-center">
       <div className="">
         <div>
-          <div className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 min-w-[40rem]  ">
+          <div className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-white bg-black border-[0.5px] h-9 lg:min-w-[40rem] xl:min-w-[40rem] 2xl:min-w-[40rem] max-w-[26rem]">
             <span className="font-NeueMachina pl-2 text-white">
               collaborations
             </span>
@@ -24,10 +24,10 @@ const Collaboration = () => {
               </span>
             </div>
           </div>
-          <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] max-w-[40rem] h-[13rem] ">
-            <div className="flex gap-8 items-center justify-center h-full w-full">
+          <div className="border-white text-white rounded-bl-xl rounded-br-xl bg-black border-[0.5px] lg:min-w-[40rem] xl:min-w-[40rem] 2xl:min-w-[40rem] max-w-[26rem] xl:h-[13rem] 2xl:h-[13rem] lg:h-[13rem] ">
+            <div className="flex gap-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col xl:items-center xl:justify-center 2xl:items-center 2xl:justify-center lg:items-center lg:p-0 xl:p-0 2xl:p-0 p-3 lg:justify-center h-full w-full">
               <div>
-                <div className="ml-4 border border-white rounded-full relative">
+                <div className="xl:ml-4 2xl:ml-4 lg:ml-4 w-fit  border border-white rounded-full relative">
                   <Image
                     src="/assets/MyPic.jpeg"
                     className="rounded-full"

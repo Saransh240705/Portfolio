@@ -19,17 +19,17 @@ const Footer = () => {
     gsap.fromTo(footerRef.current,
       {
         opacity: 0,
-        y: 50
+        y: 30
       },
       {
         opacity: 1,
         y: 0,
-        duration: 1.2,
+        duration: 1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "top 85%",
-          end: "bottom 15%",
+          start: "top 90%",
+          end: "bottom 10%",
           toggleActions: "play reverse play reverse"
         }
       }
@@ -42,20 +42,20 @@ const Footer = () => {
         gsap.fromTo(section,
           {
             opacity: 0,
-            y: 30
+            y: 20
           },
           {
             opacity: 1,
             y: 0,
-            duration: 1,
-            ease: "power3.out",
+            duration: 0.8,
+            ease: "power2.out",
             scrollTrigger: {
               trigger: footerRef.current,
-              start: "top 80%",
-              end: "bottom 20%",
+              start: "top 85%",
+              end: "bottom 15%",
               toggleActions: "play reverse play reverse"
             },
-            delay: index * 0.2
+            delay: index * 0.15
           }
         );
       }
@@ -66,35 +66,37 @@ const Footer = () => {
     };
   }, []);
 
-    const year = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
-    <div ref={footerRef} className="mt-20 mb-10 max-w-[1370px] m-auto flex items-center justify-between bg-black">
-     
-        <div ref={logoRef} className="flex items-center">
-          <div>
-            <Image src="/assets/MyLogo.png" width={80} height={80} />
+    <footer ref={footerRef} className="w-full bg-black text-white border-t border-gray-800 p-8 mt-20 mb-12">
+      <div className="max-w-[1370px] mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          <div ref={logoRef} className="flex items-center gap-3">
+            <Image src="/assets/MyLogo.png" width={80} height={80} alt="Logo" />
+            <span className="font-NeueMachina text-white text-xl">Saransh</span>
           </div>
-          <div>
-            <span className="font-NeueMachina">Saransh</span>
+          
+          <div ref={centerRef} className="font-NeueMachina text-gray-400 text-sm">
+            <span>© {year} Saransh | Freelance Web Developer</span>
           </div>
-        </div>
-        <div ref={centerRef} className="font-NeueMachina code-content">
-            <h2>@{year} Saransh | Freelance Web Developer</h2>
-        </div>
 
-      <div ref={linksRef} className="flex gap-14 pr-4 font-NeueMachina code-content">
-        <div>
-          <Link href="/about">about</Link>
-        </div>
-        <div>
-          <Link href="/project">project</Link>
-        </div>
-        <div>
-          <Link href="/contact-me">contact</Link>
+          <div ref={linksRef} className="flex gap-8 font-NeueMachina">
+            <Link href="/about" className="text-white hover:text-highlighted transition-colors duration-200">
+              about
+            </Link>
+            <Link href="/project" className="text-white hover:text-highlighted transition-colors duration-200">
+              project
+            </Link>
+            <Link href="/contact-me" className="text-white hover:text-highlighted transition-colors duration-200">
+              contact
+            </Link>
+          </div>
+          
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
