@@ -62,7 +62,7 @@ const HamburgerContent = () => {
         </span>
       </Link>
 
-      <div className="flex gap-8 mt-80  m-auto">
+      <div className="flex gap-8 mt-60  m-auto">
         <Link className="cursor-pointer" href="">
           <Linkedin />
         </Link>
