@@ -122,9 +122,9 @@ const ProjectHome = () => {
             <div className="text-center px-8 max-w-4xl mx-auto">
               <h1
                 ref={titleRef}
-                className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-8xl 2xl:text-5xl leading-tight mb-6 sm:mb-8 font-ObjectSans"
+                className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-tight mb-6 sm:mb-8 font-ObjectSans"
               >
-                A collection of my best{" "}
+                A collection of my best{" "} <br/>
                 <span className="code-aqua"> projects</span>
               </h1>
               <p

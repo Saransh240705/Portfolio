@@ -76,79 +76,94 @@ export default function Frame() {
     <div className="relative z-50">
       {/* Top Navigation Bar */}
       <div className="fixed top-0 w-full z-50 backdrop-blur-sm">
-        <div className="w-full h-12 border-b border-gray-600 bg-black/50">
-          <div className="h-full flex items-center justify-between px-4">
-            {/* Logo */}
-            <Link href="/" className="font-NeueMachina text-white">
+        <div className="w-full h-12 border-b border-gray-600 bg-black/50 relative">
+          {/* Top-left corner overlap */}
+          <div className="absolute -left-px -top-px w-12 h-12 bg-black/50 border-r border-b border-gray-600"></div>
+          {/* Top-right corner overlap */}
+          <div className="absolute -right-px -top-px w-12 h-12 bg-black/50 border-l border-b border-gray-600"></div>
+          
+          <div className="h-full flex items-center justify-center px-4 relative">
+            {/* Logo - Centered */}
+            <Link href="/" className="font-NeueMachina text-white absolute">
               <span style={{ color: themeColors.accent }}>&lt;S&gt;</span>
               aransh
             </Link>
 
-            {/* Hamburger Menu */}
-            <HamburgerMenu />
+            {/* Hamburger Menu - Centered in top-right corner box */}
+            <div className="absolute right-0 top-0 w-12 h-12 flex items-center justify-center">
+              <HamburgerMenu />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Status Bar */}
       <div className="fixed bottom-0 w-full z-50 backdrop-blur-sm">
-        <div className="w-full h-12 border-t border-gray-600 bg-black/50 flex items-center justify-between px-4">
-          {/* Left indicator */}
-          <div
-            className="h-3 w-3 rounded-full transition-colors duration-300"
-            style={{ backgroundColor: themeColors.accent }}
-          />
-
-          {/* Center text */}
-          <p className="font-NeueMachina text-white text-sm">Based In India</p>
-
-          {/* Right section with social links and CTA */}
-          <div className="flex items-center gap-4">
-            {/* Social Links */}
-            <div className="hidden lg:block xl:block 2xl:block">
-              <div className="flex gap-3">
-                <a
-                  href="https://github.com/Saransh240705"
-                  className="text-white transition-colors duration-200 hover:opacity-80"
-                  style={{ color: "white" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = themeColors.accent)
-                  }
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
-                >
-                  <GithubIcon className="size-5" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/saransh-b3729022b"
-                  className="text-white transition-colors duration-200 hover:opacity-80"
-                  style={{ color: "white" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = themeColors.accent)
-                  }
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
-                >
-                  <LinkedinIcon className="size-5" />
-                </a>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <div className="hidden lg:block">
-              <Link href="/contact-me">
-                <Button
-                  text="let's-work-together →"
-                  width={200}
-                  height={28}
-                  themeColor={themeColors.accent}
-                />
-              </Link>
-            </div>
-
-            {/* Right indicator */}
+        <div className="w-full h-12 border-t border-gray-600 bg-black/50 relative">
+          {/* Bottom-left corner overlap */}
+          <div className="absolute -left-px -bottom-px w-12 h-12 bg-black/50 border-r border-t border-gray-600"></div>
+          {/* Bottom-right corner overlap */}
+          <div className="absolute -right-px -bottom-px w-12 h-12 bg-black/50 border-l border-t border-gray-600"></div>
+          
+          {/* Bottom bar content */}
+          <div className="h-full flex items-center justify-between px-4 relative">
+            {/* Left indicator */}
             <div
-              className="h-3 w-3 rounded-full transition-colors duration-300"
+              className="h-3 w-3 rounded-full transition-colors duration-300 relative z-10"
               style={{ backgroundColor: themeColors.accent }}
             />
+
+            {/* Center text - Absolutely centered */}
+            <p className="font-NeueMachina text-white text-sm absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">Based In India</p>
+
+            {/* Right section with social links and CTA */}
+            <div className="flex items-center gap-4">
+              {/* Social Links */}
+              <div className="hidden lg:block xl:block 2xl:block">
+                <div className="flex gap-3">
+                  <a
+                    href="https://github.com/Saransh240705"
+                    className="text-white transition-colors duration-200 hover:opacity-80"
+                    style={{ color: "white" }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = themeColors.accent)
+                    }
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+                  >
+                    <GithubIcon className="size-5" />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/saransh-b3729022b"
+                    className="text-white transition-colors duration-200 hover:opacity-80"
+                    style={{ color: "white" }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = themeColors.accent)
+                    }
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+                  >
+                    <LinkedinIcon className="size-5" />
+                  </a>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="hidden mr-3 lg:block">
+                <Link href="/contact-me">
+                  <Button
+                    text="let's-work-together →"
+                    width={200}
+                    height={28}
+                    themeColor={themeColors.accent}
+                  />
+                </Link>
+              </div>
+
+              {/* Right indicator */}
+              <div
+                className="h-3 w-3 rounded-full transition-colors duration-300 relative z-10"
+                style={{ backgroundColor: themeColors.accent }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -156,7 +171,7 @@ export default function Frame() {
       <div className="hidden xl:block lg:block 2xl:block">
         <div className="flex justify-between">
           <div>
-            <nav className="border-r border-gray-600 fixed left-0 top-12 bottom-12 flex items-center justify-center w-16 text-gray-400 z-40">
+            <nav className="border-r border-gray-600 fixed left-0 top-12 bottom-12 flex items-center justify-center w-12 text-gray-400 z-40">
               <ul className="flex flex-col gap-6">
                 <li>
                   <Link
@@ -253,7 +268,7 @@ export default function Frame() {
               </ul>
             </nav>
           </div>
-          <div className="fixed right-0 top-12 bottom-12 w-4 border-l border-gray-600"></div>
+          <div className="fixed right-0 top-12 bottom-12 w-12 border-l border-gray-600"></div>
         </div>
       </div>
     </div>

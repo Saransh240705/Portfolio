@@ -125,7 +125,7 @@ const MovieBase = () => {
                   </div>
                 </div>
                 <div className="flex group items-center gap-4 w-full sm:w-auto justify-center">
-                  <div className="relative border rounded-2xl hover:scale-110 ease-in-out duration-200">
+                  <div className="relative -mt-30 border rounded-2xl hover:scale-110 ease-in-out duration-200">
                     <Image
                       className="rounded-2xl w-full max-w-[200px] sm:max-w-[300px] md:max-w-[400px] h-auto"
                       src="/assets/Streamify.png"

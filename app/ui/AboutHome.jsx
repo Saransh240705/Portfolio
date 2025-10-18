@@ -121,7 +121,7 @@ const aboutHome = () => {
           <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 lg:px-12 max-w-6xl mx-auto">
             <h1
               ref={titleRef}
-              className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-8xl 2xl:text-5xl leading-tight mb-6 sm:mb-8 font-ObjectSans">
+              className="text-white text-4xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl leading-tight mb-6 sm:mb-8 font-ObjectSans">
               Let's get to know <span className="code-red">each other</span>
             </h1>
             <p

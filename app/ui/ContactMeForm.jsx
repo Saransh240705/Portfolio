@@ -25,16 +25,31 @@ export default function ContactMeForm() {
     setStatus("Submitting...");
 
     try {
-      await fetch(
+      // Validate required fields
+      if (!formData.name || !formData.email || !formData.message) {
+        setStatus("Please fill in all required fields.");
+        return;
+      }
+
+      // Create FormData for better compatibility with Google Apps Script
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('website', formData.website);
+      formDataToSend.append('company', formData.company);
+      formDataToSend.append('message', formData.message);
+
+      const response = await fetch(
         "https://script.google.com/macros/s/AKfycbyvK65OAAoac9-gHDXda_aop8u3XKmM6C1l3UKKpFKLnsFUwZA0DMOWulgs-zqOqxE4/exec",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          mode: "no-cors", // Add no-cors mode for Google Apps Script
+          body: formDataToSend,
         }
       );
 
-      setStatus("Submitted successfully!");
+      // Since no-cors mode doesn't return response data, we assume success if no error is thrown
+      setStatus("Message sent successfully! I'll get back to you soon.");
       setFormData({
         name: "",
         email: "",
@@ -42,9 +57,20 @@ export default function ContactMeForm() {
         company: "",
         message: "",
       });
+
+      // Clear status after 5 seconds
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
+
     } catch (error) {
-      console.error(error);
-      setStatus("Error submitting form. Try again.");
+      console.error("Form submission error:", error);
+      setStatus("Error submitting form. Please try again or email me directly.");
+      
+      // Clear error status after 5 seconds
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
     }
   };
 

@@ -39,7 +39,7 @@ const HamburgerMenu = () => {
   }, [open]);
   
   return (
-    <div className="relative">
+    <div className="relative lg:hidden">
       {/* Animated Hamburger/Close Icon */}
       <div 
         onClick={toggleMenu} 

@@ -126,7 +126,7 @@ const Brainwave = () => {
                 </div>
               </div>
               <div className="hidden sm:flex group items-center gap-4">
-                <div className="relative border rounded-2xl hover:scale-110 ease-in-out duration-200">
+                <div className="relative -mt-30 border rounded-2xl hover:scale-110 ease-in-out duration-200">
                   <Image
                     className="rounded-2xl"
                     src="/assets/Safe-n-go.jpeg"

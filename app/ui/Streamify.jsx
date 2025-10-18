@@ -116,13 +116,13 @@ const Streamify = () => {
                 <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
                   Figma
                 </span>
-                <span className="border border-color w-fit rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
+                <span className="border border-color w-fit mr-3 rounded-3xl pl-2 pr-2 text-center text-xs sm:text-sm">
                   TailwindCSS
                 </span>
               </div>
             </div>
-            <div className="hidden sm:flex group items-center gap-4">
-              <div className="relative border rounded-2xl hover:scale-110 ease-in-out duration-200">
+            <div className="hidden sm:flex group items-center gap-6">
+              <div className="relative -mt-30 border rounded-2xl hover:scale-110 ease-in-out duration-200">
                 <Image
                   className="rounded-2xl"
                   src="/assets/PeaceHub.jpeg"

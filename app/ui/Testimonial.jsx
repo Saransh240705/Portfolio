@@ -76,7 +76,7 @@ const Testimonial = ({color}) => {
       </div>
       <div ref={carouselRef} className="flex m-auto  max-w-[1370px] justify-center items-center mt-30 overflow-x-visible">
         <div className="flex h-full ">
-          <div className="max-w-[1370px] mx-auto overflow-x-hidden">
+          <div className="max-w-[1350px] mx-auto overflow-x-hidden">
             <Splide
               options={{
                 type: "loop", // Loop back to the beginning when reaching the end

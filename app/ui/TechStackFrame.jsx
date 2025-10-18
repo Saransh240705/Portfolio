@@ -86,14 +86,14 @@ const TechStackFrame = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center w-full">
+    <div className="flex justify-center items-center w-full px-4">
       <motion.div
         ref={containerRef}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="w-full max-w-sm mx-auto"
+        className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl mx-auto"
       >
         <div>
           <div className="w-full h-full">
@@ -115,11 +115,11 @@ const TechStackFrame = () => {
             </div>
           </motion.div>
           <div className="border-white text-white rounded-bl-xl pt-3 rounded-br-xl bg-black border-[0.5px] h-fit w-full">
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4 p-3 sm:p-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-4 sm:gap-5 md:gap-6 lg:gap-7 p-4 sm:p-5 md:p-6 lg:p-8">
               {techStack.map((tech, index) => (
                 <motion.div
                   key={index}
-                  className="tech-item flex flex-col justify-center items-center p-2 sm:p-3 rounded-lg cursor-pointer"
+                  className="tech-item flex flex-col justify-center items-center p-3 sm:p-4 md:p-4 lg:p-5 rounded-lg cursor-pointer"
                   whileHover={{
                     scale: 1.1,
                     backgroundColor: "rgba(73, 73, 206, 0.1)",
@@ -143,11 +143,11 @@ const TechStackFrame = () => {
                       width={102}
                       height={102}
                       alt={tech.name}
-                      className="transition-all duration-300 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                      className="transition-all duration-300 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 2xl:w-36 2xl:h-36"
                     />
                   </motion.div>
                   <motion.span
-                    className="font-NeueMachina mt-1 sm:mt-2 text-xs sm:text-sm md:text-base text-center"
+                    className="font-NeueMachina mt-2 sm:mt-2 md:mt-3 lg:mt-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center"
                     whileHover={{
                       color: "#4949CE",
                       scale: 1.05,

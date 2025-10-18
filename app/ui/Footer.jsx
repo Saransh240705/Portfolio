@@ -69,7 +69,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer ref={footerRef} className="w-full bg-black text-white border-t border-gray-800 p-8 mt-20 mb-12">
+    <footer ref={footerRef} className="w-full bg-black text-white border-t border-gray-800 mt-20 ">
       <div className="max-w-[1370px] mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           
@@ -82,7 +82,7 @@ const Footer = () => {
             <span>© {year} Saransh | Freelance Web Developer</span>
           </div>
 
-          <div ref={linksRef} className="flex gap-8 font-NeueMachina">
+          <div ref={linksRef} className="flex gap-8 mr-4 font-NeueMachina">
             <Link href="/about" className="text-white hover:text-highlighted transition-colors duration-200">
               about
             </Link>

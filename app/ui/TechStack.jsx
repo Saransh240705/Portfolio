@@ -8,8 +8,8 @@ const TechStack = () => {
         <div className="bg-[#E24E62] h-[9rem] w-[9rem] -z-100 top-[140rem] opacity-40 left-[15rem] absolute rounded-full blur-[6rem]" />
         <div className="bg-[#E24E62] h-[9rem] w-[9rem] opacity-40 -z-100 top-[115rem] right-[15rem] absolute rounded-full blur-[6rem]" />
         <div className="flex items-center m-auto text-center justify-center">
-          <h1 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-8xl 2xl:text-5xl leading-tight mb-6 sm:mb-8 font-ObjectSans">
-            Some of the Tech I like to{" "}
+          <h1 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-tight mb-6 sm:mb-8 font-ObjectSans">
+            Some of the Tech I like to{" "}<br/>
             <span className="code-red"> work with</span>
           </h1>
         </div>

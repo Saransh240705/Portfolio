@@ -33,7 +33,7 @@ const PeaceHub = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center mt-20 sm:mt-28 md:mt-38 px-4">
+        <div className="flex  justify-center items-center mt-20 sm:mt-28 md:mt-38 px-4">
           <Image
             src="/assets/PeaceHub.jpeg"
             width={800}
@@ -126,7 +126,7 @@ const PeaceHub = () => {
                 </div>
               </div>
               <div className="hidden sm:flex group items-center gap-4">
-                <div className="relative border rounded-2xl hover:scale-110 ease-in-out duration-200">
+                <div className="relative -mt-30 border rounded-2xl hover:scale-110 ease-in-out duration-200">
                   <Image
                     className="rounded-2xl"
                     src="/assets/Brainwave.jpeg"
