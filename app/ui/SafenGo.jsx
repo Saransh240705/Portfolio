@@ -8,8 +8,23 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { testimonials } from "../lib/testimonial";
 import Collaboration from "./Collaboration";
+import { useState, useEffect } from "react";
 
 const SafenGo = () => {
+  const [isClient, setIsClient] = useState(false);
+  const [slideWidth, setSlideWidth] = useState("400px");
+
+  useEffect(() => {
+    setIsClient(true);
+    const updateSlideWidth = () => {
+      setSlideWidth(window.innerWidth > 768 ? "400px" : "300px");
+    };
+    
+    updateSlideWidth();
+    window.addEventListener('resize', updateSlideWidth);
+    
+    return () => window.removeEventListener('resize', updateSlideWidth);
+  }, []);
   return (
     <div className="overflow-x-hidden w-full">
       <div>
@@ -155,52 +170,56 @@ const SafenGo = () => {
             <div className="flex m-auto w-full max-w-[1370px] justify-center items-center mt-20 sm:mt-24 md:mt-30 overflow-x-visible px-4">
               <div className="flex h-full w-full">
                 <div className="w-full max-w-[1370px] mx-auto overflow-x-hidden -z-50">
-                  <Splide
-                    options={{
-                      type: "loop", // Loop back to the beginning when reaching the end
-                      autoScroll: {
-                        pauseOnHover: true, // Do not pause scrolling when hovering over the carousel
-                        pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
-                        rewind: true, // Rewind to start when the end is reached
-                        speed: 3, // Scrolling speed
-                      },
-                      arrows: false, // Hide navigation arrows
-                      pagination: false, // Hide pagination dots
-                      gap: "20px", // Responsive gap
-                      fixedWidth: window?.innerWidth > 768 ? "400px" : "300px",
-                    }}
-                    extensions={{ AutoScroll }} // Use the AutoScroll extension
-                  >
-                    {testimonials.map((t) => (
-                      <SplideSlide key={t.id}>
-                        <TestimonialFrame name={t.name} desc={t.desc} />
-                      </SplideSlide>
-                    ))}
-                  </Splide>
-                  <div className="mt-6 sm:mt-8 md:mt-10">
-                    <Splide
-                      options={{
-                        type: "loop", // Loop back to the beginning when reaching the end
-                        autoScroll: {
-                          pauseOnHover: true, // Do not pause scrolling when hovering over the carousel
-                          pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
-                          rewind: true, // Rewind to start when the end is reached
-                          speed: -3, // Scrolling speed
-                        },
-                        arrows: false, // Hide navigation arrows
-                        pagination: false, // Hide pagination dots
-                        gap: "20px", // Responsive gap
-                        fixedWidth: window?.innerWidth > 768 ? "400px" : "300px",
-                      }}
-                      extensions={{ AutoScroll }} // Use the AutoScroll extension
-                    >
-                      {testimonials.map((t) => (
-                        <SplideSlide key={`second-${t.id}`}>
-                          <TestimonialFrame name={t.name} desc={t.desc} />
-                        </SplideSlide>
-                      ))}
-                    </Splide>
-                  </div>
+                  {isClient && (
+                    <>
+                      <Splide
+                        options={{
+                          type: "loop", // Loop back to the beginning when reaching the end
+                          autoScroll: {
+                            pauseOnHover: true, // Do not pause scrolling when hovering over the carousel
+                            pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
+                            rewind: true, // Rewind to start when the end is reached
+                            speed: 3, // Scrolling speed
+                          },
+                          arrows: false, // Hide navigation arrows
+                          pagination: false, // Hide pagination dots
+                          gap: "20px", // Responsive gap
+                          fixedWidth: slideWidth,
+                        }}
+                        extensions={{ AutoScroll }} // Use the AutoScroll extension
+                      >
+                        {testimonials.map((t) => (
+                          <SplideSlide key={t.id}>
+                            <TestimonialFrame name={t.name} desc={t.desc} />
+                          </SplideSlide>
+                        ))}
+                      </Splide>
+                      <div className="mt-6 sm:mt-8 md:mt-10">
+                        <Splide
+                          options={{
+                            type: "loop", // Loop back to the beginning when reaching the end
+                            autoScroll: {
+                              pauseOnHover: true, // Do not pause scrolling when hovering over the carousel
+                              pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
+                              rewind: true, // Rewind to start when the end is reached
+                              speed: -3, // Scrolling speed
+                            },
+                            arrows: false, // Hide navigation arrows
+                            pagination: false, // Hide pagination dots
+                            gap: "20px", // Responsive gap
+                            fixedWidth: slideWidth,
+                          }}
+                          extensions={{ AutoScroll }} // Use the AutoScroll extension
+                        >
+                          {testimonials.map((t) => (
+                            <SplideSlide key={`second-${t.id}`}>
+                              <TestimonialFrame name={t.name} desc={t.desc} />
+                            </SplideSlide>
+                          ))}
+                        </Splide>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
