@@ -63,14 +63,11 @@ const HamburgerContent = () => {
       </Link>
 
       <div className="flex gap-8 mt-60  m-auto">
-        <Link className="cursor-pointer" href="">
+        <Link className="cursor-pointer" href="https://www.linkedin.com/in/saransh-b3729022b/">
           <Linkedin />
         </Link>
-        <Link className="cursor-pointer" href="">
+        <Link className="cursor-pointer" href="https://github.com/Saransh240705">
           <Github />
-        </Link>
-        <Link className="cursor-pointer" href="">
-          <Instagram />
         </Link>
       </div>
       <Link href="/contact-me" className="m-auto mt-6">
