@@ -82,4 +82,14 @@ export const projectsFull = [
     tag3: "TailwindCSS",
     link: '/project/MovieBase',
   },
+  {
+    id: 6,
+    serialNo: "06",
+    name: "Finance and Economic Society",
+    image: "/assets/FES.png",
+    tag1: "NextJS",
+    tag2: "TypeScript",
+    tag3: "GSAP",
+    link: '/project/FES',
+  },
 ];

@@ -20,6 +20,7 @@ const HamburgerContent = () => {
         return { accent: "#4949CE" };
     }
   };
+  
 
   const colours = getColours();
 

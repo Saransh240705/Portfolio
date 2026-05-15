@@ -116,26 +116,26 @@ const MovieBase = () => {
           </div>
           <div className="flex justify-center mt-20 sm:mt-24 md:mt-30 items-center w-full px-4 sm:px-6">
             <Link
-              href="/project/Streamify"
+              href="/project/FES"
               className="w-full max-w-[380px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1000px]"
             >
               <div className="flex transparent mb-16 sm:mb-18 md:mb-20 h-auto sm:h-[16rem] md:h-[15rem] group border rounded-2xl justify-between items-center p-4 sm:p-5 flex-col sm:flex-row gap-4 sm:gap-0">
                 <div className="w-full sm:w-auto">
                   <div className="flex group gap-2 justify-center sm:justify-start">
-                    <p className="code-content font-NeueMachina text-sm sm:text-base">01</p>
+                    <p className="code-content font-NeueMachina text-sm sm:text-base">06</p>
                     <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-ObjectSans mb-1">
-                      Streamify
+                      Finance and Economic Society
                     </h1>
                   </div>
                   <div className="ml-0 sm:ml-6 group w-full flex gap-2 font-NeueMachina flex-wrap justify-center sm:justify-start mt-2">
                     <span className="border w-fit border-color rounded-3xl px-2 py-1 text-center text-xs sm:text-sm">
-                      React
+                      NextJS
                     </span>
                     <span className="border border-color w-fit rounded-3xl px-2 py-1 text-center text-xs sm:text-sm">
-                      ExpressJs
+                      TypeScript
                     </span>
                     <span className="border border-color w-fit rounded-3xl px-2 py-1 text-center text-xs sm:text-sm">
-                      MongoDB
+                      GSAP
                     </span>
                   </div>
                 </div>
@@ -143,13 +143,13 @@ const MovieBase = () => {
                   <div className="relative -mt-30 border rounded-2xl hover:scale-110 ease-in-out duration-200">
                     <Image
                       className="rounded-2xl w-full max-w-[200px] sm:max-w-[300px] md:max-w-[400px] h-auto"
-                      src="/assets/Streamify.png"
+                      src="/assets/FES.png"
                       width={433}
                       height={110}
                     />
                   </div>
                   <div className="flex flex-col items-center justify-center">
-                    <div className="font-NeueMachina font-thin text-sm sm:text-base">2025</div>
+                    <div className="font-NeueMachina font-thin text-sm sm:text-base">2026</div>
                     <div className="font-NeueMachina font-thin text-xl sm:text-2xl">↗</div>
                   </div>
                 </div>
